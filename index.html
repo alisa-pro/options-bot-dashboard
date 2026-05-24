@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>options.watch — S&P 500 Scanner</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080c0b;--surface:#0e1412;--surface2:#131a17;--border:#1e2d28;
+  --ink:#ccddd6;--muted:#5a7a6e;--faint:#324740;
+  --green:#2ecc8a;--green-dim:rgba(46,204,138,.12);
+  --amber:#d4a843;--amber-dim:rgba(212,168,67,.1);
+  --red:#d45a55;--red-dim:rgba(212,90,85,.1);
+  --blue:#4a9edd;--grey:#4a6058;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:"DM Mono",monospace;font-size:13px;line-height:1.6;min-height:100vh;
+  background-image:radial-gradient(ellipse 60% 40% at 10% 0%,rgba(46,204,138,.05),transparent 60%),
+                   radial-gradient(ellipse 40% 30% at 90% 100%,rgba(74,158,221,.04),transparent 50%)}
+.wrap{max-width:1400px;margin:0 auto;padding:28px 20px 80px}
+
+/* header */
+header{display:flex;justify-content:space-between;align-items:flex-start;
+  border-bottom:1px solid var(--border);padding-bottom:18px;margin-bottom:4px;flex-wrap:wrap;gap:10px}
+h1{font-family:"Playfair Display",serif;font-size:30px;font-weight:700;letter-spacing:-.03em}
+h1 span{color:var(--green)}
+.tagline{font-size:10px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:3px}
+.header-right{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.scan-time{font-size:11px;color:var(--muted)}
+.scan-time b{color:var(--ink)}
+.freshness{font-size:11px}
+.hdr-btns{display:flex;gap:8px}
+
+/* stats */
+.stats-row{display:flex;gap:10px;margin:18px 0 22px;flex-wrap:wrap}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 18px;min-width:110px;flex:1}
+.stat-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}
+.stat-val{font-size:20px;font-weight:500}
+.stat-val.g{color:var(--green)}.stat-val.a{color:var(--amber)}.stat-val.r{color:var(--red)}
+.stat-sub{font-size:10px;color:var(--faint);margin-top:2px}
+
+/* tabs */
+.tabs{display:flex;border-bottom:1px solid var(--border);margin-bottom:20px}
+.tab{padding:9px 16px;font-size:12px;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;transition:color .15s}
+.tab:hover{color:var(--ink)}.tab.on{color:var(--green);border-bottom-color:var(--green)}
+
+/* buttons */
+.btn{font-family:inherit;font-size:12px;font-weight:500;cursor:pointer;border:0;border-radius:7px;padding:7px 14px;transition:opacity .15s}
+.btn:hover{opacity:.82}.btn-p{background:var(--green);color:#071209}.btn-s{background:var(--surface);color:var(--ink);border:1px solid var(--border)}
+.btn-d{background:var(--red-dim);color:var(--red);border:1px solid rgba(212,90,85,.3)}
+
+/* controls */
+.controls{display:flex;gap:8px;align-items:center;margin-bottom:16px;flex-wrap:wrap}
+.controls select,.controls input{font-family:inherit;font-size:12px;background:var(--surface);color:var(--ink);
+  border:1px solid var(--border);border-radius:7px;padding:6px 10px;outline:none}
+.controls select:focus,.controls input:focus{border-color:var(--green)}
+.showing{font-size:11px;color:var(--muted);margin-left:auto}
+
+/* sector grid */
+.sector-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:9px;margin-bottom:8px}
+.sc{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px;cursor:pointer;transition:all .15s}
+.sc:hover,.sc.on{border-color:var(--green);background:var(--green-dim)}
+.sc-name{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px}
+.sc-bias{font-size:16px;font-weight:500;margin-bottom:4px}
+.sc-bias.bullish{color:var(--green)}.sc-bias.bearish{color:var(--red)}.sc-bias.mixed{color:var(--amber)}
+.sc-row{display:flex;gap:10px;font-size:11px}
+.sc-t{color:var(--green)}.sc-w{color:var(--amber)}.sc-p{color:var(--faint)}.sc-b{color:var(--muted);margin-left:auto}
+
+/* table */
+.tbl-wrap{overflow-x:auto;border-radius:10px;border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+thead{position:sticky;top:0;z-index:2}
+thead th{background:var(--surface2);text-align:left;color:var(--muted);font-weight:500;font-size:10px;
+  text-transform:uppercase;letter-spacing:.08em;padding:10px 12px;border-bottom:1px solid var(--border);white-space:nowrap}
+tbody tr{border-bottom:1px solid var(--surface2);transition:background .1s}
+tbody tr:hover{background:var(--surface)}
+tbody tr:last-child{border-bottom:0}
+td{padding:10px 12px;vertical-align:middle}
+.sec-div td{background:var(--surface2);color:var(--muted);font-size:10px;text-transform:uppercase;
+  letter-spacing:.09em;padding:6px 12px;border-top:1px solid var(--border)}
+.empty-row td{padding:48px;text-align:center;color:var(--muted)}
+
+/* signal cells */
+.sym{font-size:14px;font-weight:500}.px{font-size:11px;color:var(--muted);margin-top:1px}
+.vp{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:500;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.vp::before{content:"";width:6px;height:6px;border-radius:50%}
+.v-TRADE{background:var(--green-dim);color:var(--green);border:1px solid rgba(46,204,138,.25)}.v-TRADE::before{background:var(--green);box-shadow:0 0 5px var(--green)}
+.v-WATCH{background:var(--amber-dim);color:var(--amber);border:1px solid rgba(212,168,67,.25)}.v-WATCH::before{background:var(--amber)}
+.v-PASS{background:transparent;color:var(--grey);border:1px solid var(--border)}.v-PASS::before{background:var(--grey)}
+.dir{font-size:12px}.cv{font-size:10.5px;color:var(--faint);display:block;margin-top:1px}
+.dir.bullish{color:var(--green)}.dir.bearish{color:var(--red)}.dir.neutral{color:var(--muted)}
+.up{color:var(--green)}.down{color:var(--red)}
+.rb{display:inline-block;font-size:10.5px;padding:2px 7px;border-radius:5px;border:1px solid var(--border);white-space:nowrap}
+.r-low-iv{color:var(--green);border-color:rgba(46,204,138,.3);background:var(--green-dim)}
+.r-high-iv{color:var(--amber);border-color:rgba(212,168,67,.3);background:var(--amber-dim)}
+.r-mid-iv{color:var(--muted)}.r-unknown{color:var(--faint)}
+.fc{font-size:12px}.acc{color:var(--green)}.dist{color:var(--red)}.neut{color:var(--muted)}
+.strc{font-size:11px;color:var(--muted);max-width:170px;line-height:1.4}
+.why{font-size:10.5px;color:var(--faint);max-width:200px;line-height:1.4}
+
+/* ── trades tab ── */
+.trade-layout{display:grid;grid-template-columns:220px 1fr;gap:16px}
+@media(max-width:768px){.trade-layout{grid-template-columns:1fr}}
+
+/* watchlist sidebar */
+.wl-sidebar{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px;height:fit-content}
+.wl-title{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
+.wl-item{padding:8px 10px;border-radius:7px;cursor:pointer;font-size:12px;color:var(--muted);
+  transition:all .12s;display:flex;justify-content:space-between;align-items:center;margin-bottom:2px}
+.wl-item:hover,.wl-item.on{background:var(--green-dim);color:var(--green)}
+.wl-count{font-size:10px;opacity:.7}
+.wl-add{display:flex;gap:6px;margin-top:12px;padding-top:12px;border-top:1px solid var(--border)}
+.wl-add input{flex:1;font-family:inherit;font-size:11px;background:var(--surface2);color:var(--ink);
+  border:1px solid var(--border);border-radius:6px;padding:5px 8px;outline:none}
+
+/* portfolio summary */
+.port-row{display:flex;gap:10px;margin-bottom:18px;flex-wrap:wrap}
+.port-stat{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 14px;flex:1;min-width:100px}
+.port-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:4px}
+.port-val{font-size:18px;font-weight:500}
+
+/* trade form */
+.trade-form{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:16px}
+.form-title{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
+.form-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:14px}
+.field label{display:block;font-size:10px;color:var(--muted);margin-bottom:4px;text-transform:uppercase;letter-spacing:.06em}
+.field input,.field select{width:100%;font-family:inherit;font-size:12px;background:var(--surface2);color:var(--ink);
+  border:1px solid var(--border);border-radius:6px;padding:6px 9px;outline:none}
+.field input:focus,.field select:focus{border-color:var(--green)}
+
+/* trade cards */
+.trade-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin-bottom:10px;transition:border-color .15s}
+.trade-card:hover{border-color:var(--green)}
+.tc-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px}
+.tc-sym{font-size:16px;font-weight:500}
+.tc-struct{font-size:11px;color:var(--muted);margin-top:2px}
+.tc-status{font-size:11px;padding:3px 8px;border-radius:999px}
+.st-open{background:var(--green-dim);color:var(--green);border:1px solid rgba(46,204,138,.25)}
+.st-closed{background:var(--surface2);color:var(--muted);border:1px solid var(--border)}
+.tc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px;font-size:11.5px}
+.tc-field label{display:block;font-size:10px;color:var(--faint);margin-bottom:2px}
+.tc-field span{color:var(--ink)}
+.tc-notes{font-size:11px;color:var(--faint);margin-top:10px;padding-top:10px;border-top:1px solid var(--border)}
+.tc-actions{display:flex;gap:8px;margin-top:12px}
+.pnl-pos{color:var(--green)}.pnl-neg{color:var(--red)}
+
+/* iv tracker */
+.iv-badge{display:inline-flex;align-items:center;gap:4px;font-size:10px;padding:2px 7px;
+  border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);margin-top:3px}
+
+/* spin */
+.spin{display:inline-block;width:13px;height:13px;border:2px solid var(--border);
+  border-top-color:var(--green);border-radius:50%;animation:spin .7s linear infinite;vertical-align:-2px;margin-right:6px}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.footer{margin-top:24px;padding-top:14px;border-top:1px solid var(--border);color:var(--faint);font-size:11px;line-height:1.7}
+.footer b{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div>
+    <h1><span>▸</span> options.watch</h1>
+    <div class="tagline">S&P 500 · Research only · No orders placed</div>
+  </div>
+  <div class="header-right">
+    <div class="scan-time" id="scan-time">No data loaded</div>
+    <div class="freshness" id="freshness" style="display:none"></div>
+    <div class="hdr-btns">
+      <button class="btn btn-s" id="reload-btn" onclick="reloadLast()" style="display:none">↻ Reload</button>
+      <label class="btn btn-s" style="position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:6px;cursor:pointer">
+        📂 Load JSON
+        <input type="file" id="file-input" accept=".json" style="position:absolute;opacity:0;inset:0;cursor:pointer">
+      </label>
+    </div>
+  </div>
+</header>
+
+<div class="stats-row" id="stats-row">
+  <div class="stat"><div class="stat-label">Universe</div><div class="stat-val" id="s-total">—</div><div class="stat-sub">stocks</div></div>
+  <div class="stat"><div class="stat-label">Trades</div><div class="stat-val g" id="s-trade">—</div><div class="stat-sub">high conviction</div></div>
+  <div class="stat"><div class="stat-label">Watch</div><div class="stat-val a" id="s-watch">—</div><div class="stat-sub">building</div></div>
+  <div class="stat"><div class="stat-label">Pass</div><div class="stat-val" id="s-pass" style="color:var(--grey)">—</div><div class="stat-sub">no edge</div></div>
+  <div class="stat"><div class="stat-label">Account</div><div class="stat-val" id="s-acct">—</div><div class="stat-sub" id="s-risk">—</div></div>
+  <div class="stat"><div class="stat-label">Open trades</div><div class="stat-val g" id="s-open">—</div><div class="stat-sub" id="s-risk2">at risk</div></div>
+  <div class="stat"><div class="stat-label">Total P&L</div><div class="stat-val" id="s-pnl">—</div><div class="stat-sub" id="s-winrate">—</div></div>
+</div>
+
+<div class="tabs">
+  <div class="tab on" onclick="switchTab('signals',this)">Signals</div>
+  <div class="tab" onclick="switchTab('sectors',this)">Sector map</div>
+  <div class="tab" onclick="switchTab('trades',this)">My Trades</div>
+  <div class="tab" onclick="switchTab('iv',this)">IV History</div>
+</div>
+
+<!-- ── Signals tab ── -->
+<div id="tab-signals">
+  <div class="controls">
+    <select id="f-verdict" onchange="renderSignals()">
+      <option value="all">All verdicts</option>
+      <option value="TRADE">TRADE</option>
+      <option value="WATCH">WATCH</option>
+      <option value="PASS">PASS</option>
+    </select>
+    <select id="f-sector" onchange="renderSignals()"><option value="all">All sectors</option></select>
+    <select id="f-dir" onchange="renderSignals()">
+      <option value="all">All directions</option>
+      <option value="bullish">Bullish</option>
+      <option value="bearish">Bearish</option>
+      <option value="neutral">Neutral</option>
+    </select>
+    <select id="f-regime" onchange="renderSignals()">
+      <option value="all">All IV regimes</option>
+      <option value="low-iv">Low IV (buy premium)</option>
+      <option value="high-iv">High IV (sell premium)</option>
+      <option value="mid-iv">Mid IV</option>
+    </select>
+    <input type="text" id="f-search" placeholder="Ticker…" oninput="renderSignals()" style="width:100px">
+    <span class="showing" id="showing">Load a scan file to begin</span>
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th>Ticker</th><th>Verdict</th><th>Direction</th><th>50/200 MA</th>
+        <th>IV regime</th><th>Exp. move</th><th>Flow</th><th>Structure</th><th>Why it could be wrong</th>
+      </tr></thead>
+      <tbody id="sig-rows">
+        <tr class="empty-row"><td colspan="9">Load a scan JSON to see signals.<br>
+          <span style="font-size:11px;color:var(--faint)">Run <code>python run.py export</code> then click Load JSON above.</span>
+        </td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ── Sectors tab ── -->
+<div id="tab-sectors" style="display:none">
+  <div class="sector-grid" id="sector-grid">
+    <div style="color:var(--muted);padding:20px">Load a scan JSON to see sector breakdown.</div>
+  </div>
+</div>
+
+<!-- ── Trades tab ── -->
+<div id="tab-trades" style="display:none">
+  <div class="trade-layout">
+
+    <!-- Watchlist sidebar -->
+    <div class="wl-sidebar">
+      <div class="wl-title">Watchlists</div>
+      <div id="wl-list"></div>
+      <div class="wl-add">
+        <input type="text" id="wl-name-input" placeholder="New list name…">
+        <button class="btn btn-p" onclick="createWatchlist()" style="padding:5px 10px;font-size:11px">+</button>
+      </div>
+    </div>
+
+    <!-- Main trade area -->
+    <div>
+      <!-- Portfolio summary -->
+      <div class="port-row" id="port-row">
+        <div class="port-stat"><div class="port-label">Open positions</div><div class="port-val g" id="p-open">—</div></div>
+        <div class="port-stat"><div class="port-label">Total P&L</div><div class="port-val" id="p-pnl">—</div></div>
+        <div class="port-stat"><div class="port-label">Win rate</div><div class="port-val" id="p-wr">—</div></div>
+        <div class="port-stat"><div class="port-label">Avg win</div><div class="port-val g" id="p-aw">—</div></div>
+        <div class="port-stat"><div class="port-label">Avg loss</div><div class="port-val r" id="p-al">—</div></div>
+        <div class="port-stat"><div class="port-label">At risk</div><div class="port-val a" id="p-ar">—</div></div>
+      </div>
+
+      <!-- Log trade form -->
+      <div class="trade-form">
+        <div class="form-title">Log a trade</div>
+        <div class="form-grid">
+          <div class="field"><label>Ticker</label><input id="t-sym" placeholder="NVDA"></div>
+          <div class="field"><label>Structure</label>
+            <select id="t-struct">
+              <option>call debit spread</option><option>put debit spread</option>
+              <option>long call</option><option>long put</option>
+              <option>put credit spread</option><option>call credit spread</option>
+              <option>cash-secured put</option><option>iron condor</option>
+              <option>covered call</option>
+            </select>
+          </div>
+          <div class="field"><label>Direction</label>
+            <select id="t-dir"><option>bullish</option><option>bearish</option><option>neutral</option></select>
+          </div>
+          <div class="field"><label>Strikes</label><input id="t-strikes" placeholder="180/185"></div>
+          <div class="field"><label>Expiry</label><input id="t-expiry" type="date"></div>
+          <div class="field"><label>Premium paid ($)</label><input id="t-premium" type="number" step="0.01" placeholder="2.40"></div>
+          <div class="field"><label>Contracts</label><input id="t-contracts" type="number" value="1" min="1"></div>
+          <div class="field"><label>Max loss ($)</label><input id="t-maxloss" type="number" step="1" placeholder="260"></div>
+          <div class="field"><label>Watchlist</label><select id="t-wl"><option value="">None</option></select></div>
+          <div class="field"><label>Notes</label><input id="t-notes" placeholder="Signal context…"></div>
+        </div>
+        <button class="btn btn-p" onclick="logTrade()">Log trade</button>
+      </div>
+
+      <!-- Trade cards -->
+      <div id="show-closed-row" style="margin-bottom:12px;display:none">
+        <label style="font-size:12px;color:var(--muted);cursor:pointer">
+          <input type="checkbox" id="show-closed" onchange="renderTrades()"> Show closed trades
+        </label>
+      </div>
+      <div id="trade-cards"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── IV History tab ── -->
+<div id="tab-iv" style="display:none">
+  <div style="color:var(--muted);font-size:12px;margin-bottom:16px;padding:12px;background:var(--surface);border-radius:8px;border:1px solid var(--border)">
+    IV history builds automatically every time you run <code>python run.py export</code>.
+    After ~20 scans the IV rank shown in signals becomes real (52-week range based) rather than estimated.
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th>Ticker</th><th>Data points</th><th>Latest date</th><th>Latest IV</th><th>Status</th>
+      </tr></thead>
+      <tbody id="iv-rows"><tr class="empty-row"><td colspan="5">Load a scan file to see IV history progress.</td></tr></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="footer">
+  <b>Research tool only</b> — no orders placed. 1% account risk, 2% cap.
+  Flow = OHLCV proxy. IV rank = IV-vs-RV estimate until 20+ history points collected.
+  Not financial advice.
+</div>
+</div>
+
+<script>
+// ── state ─────────────────────────────────────────────────────
+let SCAN = {signals:[], sector_summaries:{}, account_size:0, risk_pct:1, scanned_at:null};
+let JOURNAL = {watchlists:{}, trades:[], summary:{}};
+let LAST_FILE = null;
+let ACTIVE_WL = null;
+
+// ── file load ──────────────────────────────────────────────────
+document.getElementById('file-input').addEventListener('change', e => {
+  const f = e.target.files[0]; if(!f) return; LAST_FILE = f; readFile(f);
+});
+document.addEventListener('dragover', e => e.preventDefault());
+document.addEventListener('drop', e => {
+  e.preventDefault();
+  const f = e.dataTransfer.files[0]; if(!f) return; LAST_FILE = f; readFile(f);
+});
+function readFile(f) {
+  const r = new FileReader();
+  r.onload = ev => { try { ingestScan(JSON.parse(ev.target.result)); } catch(e) { alert('Invalid JSON: '+e); } };
+  r.readAsText(f);
+}
+function reloadLast() { if(LAST_FILE) readFile(LAST_FILE); }
+
+function ingestScan(d) {
+  SCAN = d;
+  updateStats();
+  buildSectorFilter();
+  buildSectorGrid();
+  renderSignals();
+  renderIV();
+  const at = d.scanned_at ? new Date(d.scanned_at*1000) : null;
+  document.getElementById('scan-time').innerHTML = 'Last scan: <b>'+(at ? at.toLocaleString() : 'unknown')+'</b>';
+  const fresh = document.getElementById('freshness');
+  if(at) {
+    const h = (Date.now()-at.getTime())/3600000;
+    fresh.style.display='block';
+    fresh.innerHTML = h<6 ? '<span style="color:var(--green)">● Fresh</span> — '+Math.round(h*60)+'m ago'
+      : h<26 ? '<span style="color:var(--amber)">● Today</span> — '+Math.round(h)+'h old'
+      : '<span style="color:var(--red)">⚠ Stale '+Math.floor(h/24)+'d</span> — re-run export';
+  }
+  document.getElementById('reload-btn').style.display='inline-flex';
+}
+
+// ── journal (localStorage so it persists without a server) ─────
+function loadJournal() {
+  try { JOURNAL = JSON.parse(localStorage.getItem('optionsbot_journal') || '{"watchlists":{},"trades":[],"summary":{}}'); }
+  catch(e) { JOURNAL = {watchlists:{}, trades:[], summary:{}}; }
+  computeSummary();
+  renderWatchlists();
+  renderTrades();
+  updatePortStats();
+  populateWatchlistSelect();
+}
+function saveJournal() {
+  localStorage.setItem('optionsbot_journal', JSON.stringify(JOURNAL));
+  computeSummary();
+  updatePortStats();
+  updateStats();
+}
+function computeSummary() {
+  const closed = JOURNAL.trades.filter(t => t.status==='closed' && t.pnl!=null);
+  const open = JOURNAL.trades.filter(t => t.status==='open');
+  const wins = closed.filter(t => t.pnl>0);
+  const losses = closed.filter(t => t.pnl<0);
+  JOURNAL.summary = {
+    open_count: open.length,
+    closed_count: closed.length,
+    total_pnl: closed.reduce((s,t) => s+t.pnl, 0),
+    win_rate: closed.length ? Math.round(wins.length/closed.length*100) : 0,
+    avg_win: wins.length ? wins.reduce((s,t) => s+t.pnl,0)/wins.length : 0,
+    avg_loss: losses.length ? losses.reduce((s,t) => s+t.pnl,0)/losses.length : 0,
+    at_risk: open.reduce((s,t) => s+(t.max_loss||0), 0),
+  };
+}
+
+// ── stats ──────────────────────────────────────────────────────
+function updateStats() {
+  const s = SCAN.signals;
+  document.getElementById('s-total').textContent = s.length.toLocaleString();
+  document.getElementById('s-trade').textContent = s.filter(x=>x.verdict==='TRADE').length;
+  document.getElementById('s-watch').textContent = s.filter(x=>x.verdict==='WATCH').length;
+  document.getElementById('s-pass').textContent  = s.filter(x=>x.verdict==='PASS').length;
+  document.getElementById('s-acct').textContent  = SCAN.account_size ? '$'+SCAN.account_size.toLocaleString() : '—';
+  document.getElementById('s-risk').textContent  = (SCAN.risk_pct||1)+'% risk/trade';
+  const sum = JOURNAL.summary;
+  document.getElementById('s-open').textContent = sum.open_count||'—';
+  document.getElementById('s-risk2').textContent = sum.at_risk ? '$'+sum.at_risk.toFixed(0)+' at risk' : '—';
+  const pnl = sum.total_pnl||0;
+  const pnlEl = document.getElementById('s-pnl');
+  pnlEl.textContent = (pnl>=0?'+$':'−$')+Math.abs(pnl).toFixed(0);
+  pnlEl.className = 'stat-val '+(pnl>=0?'g':'r');
+  document.getElementById('s-winrate').textContent = sum.win_rate!=null ? sum.win_rate+'% win rate' : '—';
+}
+function updatePortStats() {
+  const s = JOURNAL.summary;
+  document.getElementById('p-open').textContent = s.open_count||0;
+  const pnl = s.total_pnl||0;
+  const pEl = document.getElementById('p-pnl');
+  pEl.textContent = (pnl>=0?'+$':'−$')+Math.abs(pnl).toFixed(2);
+  pEl.className = 'port-val '+(pnl>=0?'g':'r');
+  document.getElementById('p-wr').textContent = (s.win_rate||0)+'%';
+  document.getElementById('p-aw').textContent = s.avg_win ? '+$'+s.avg_win.toFixed(2) : '—';
+  document.getElementById('p-al').textContent = s.avg_loss ? '−$'+Math.abs(s.avg_loss).toFixed(2) : '—';
+  document.getElementById('p-ar').textContent = s.at_risk ? '$'+s.at_risk.toFixed(0) : '—';
+}
+
+// ── watchlists ─────────────────────────────────────────────────
+function renderWatchlists() {
+  const el = document.getElementById('wl-list');
+  const wls = JOURNAL.watchlists;
+  if(!Object.keys(wls).length) {
+    el.innerHTML = '<div style="color:var(--faint);font-size:11px;padding:4px">No lists yet.</div>';
+    return;
+  }
+  el.innerHTML = Object.entries(wls).map(([name, tickers]) =>
+    `<div class="wl-item ${ACTIVE_WL===name?'on':''}" onclick="selectWatchlist('${name}')">
+      <span>${name}</span><span class="wl-count">${tickers.length}</span>
+    </div>`).join('');
+}
+function selectWatchlist(name) {
+  ACTIVE_WL = ACTIVE_WL===name ? null : name;
+  renderWatchlists();
+  renderTrades();
+}
+function createWatchlist() {
+  const inp = document.getElementById('wl-name-input');
+  const name = inp.value.trim(); if(!name) return;
+  if(!JOURNAL.watchlists[name]) JOURNAL.watchlists[name] = [];
+  inp.value=''; saveJournal(); renderWatchlists(); populateWatchlistSelect();
+}
+function populateWatchlistSelect() {
+  const sel = document.getElementById('t-wl');
+  sel.innerHTML = '<option value="">None</option>' +
+    Object.keys(JOURNAL.watchlists).map(n=>`<option value="${n}">${n}</option>`).join('');
+}
+
+// ── log trade ──────────────────────────────────────────────────
+function logTrade() {
+  const sym = document.getElementById('t-sym').value.trim().toUpperCase();
+  const premium = parseFloat(document.getElementById('t-premium').value);
+  const contracts = parseInt(document.getElementById('t-contracts').value)||1;
+  const maxloss = parseFloat(document.getElementById('t-maxloss').value)||premium*contracts*100;
+  if(!sym||!premium) { alert('Ticker and premium are required.'); return; }
+  const id = Math.random().toString(36).slice(2,10);
+  const wl = document.getElementById('t-wl').value;
+  const trade = {
+    id, symbol:sym, watchlist:wl, status:'open',
+    structure: document.getElementById('t-struct').value,
+    direction: document.getElementById('t-dir').value,
+    entry_date: new Date().toISOString().slice(0,10),
+    expiry: document.getElementById('t-expiry').value,
+    strikes: document.getElementById('t-strikes').value,
+    premium_paid: premium, contracts, max_loss: maxloss,
+    target_profit: Math.round(premium*0.5*contracts*100*100)/100,
+    stop_loss: Math.round(premium*0.5*contracts*100*100)/100,
+    exit_date:null, exit_premium:null, pnl:null,
+    notes: document.getElementById('t-notes').value,
+  };
+  JOURNAL.trades.push(trade);
+  if(wl && JOURNAL.watchlists[wl] && !JOURNAL.watchlists[wl].includes(sym))
+    JOURNAL.watchlists[wl].push(sym);
+  saveJournal(); renderTrades(); renderWatchlists();
+  ['t-sym','t-strikes','t-notes'].forEach(id => document.getElementById(id).value='');
+  document.getElementById('t-premium').value='';
+  document.getElementById('t-contracts').value='1';
+  document.getElementById('t-maxloss').value='';
+}
+
+// ── close trade ────────────────────────────────────────────────
+function closeTrade(id) {
+  const exit = parseFloat(prompt('Exit premium ($):'));
+  if(isNaN(exit)) return;
+  const notes = prompt('Notes (optional):') || '';
+  const trade = JOURNAL.trades.find(t=>t.id===id);
+  if(!trade) return;
+  trade.status='closed';
+  trade.exit_date=new Date().toISOString().slice(0,10);
+  trade.exit_premium=exit;
+  trade.pnl=Math.round((exit-trade.premium_paid)*trade.contracts*100*100)/100;
+  trade.notes=(trade.notes||'')+' | '+notes;
+  saveJournal(); renderTrades();
+}
+
+function deleteTrade(id) {
+  if(!confirm('Delete this trade?')) return;
+  JOURNAL.trades = JOURNAL.trades.filter(t=>t.id!==id);
+  saveJournal(); renderTrades();
+}
+
+// ── render trades ──────────────────────────────────────────────
+function renderTrades() {
+  const showClosed = document.getElementById('show-closed')?.checked;
+  const el = document.getElementById('trade-cards');
+  let trades = JOURNAL.trades;
+  if(ACTIVE_WL) trades = trades.filter(t => t.watchlist===ACTIVE_WL);
+  if(!showClosed) trades = trades.filter(t => t.status==='open');
+  trades = [...trades].reverse();
+  document.getElementById('show-closed-row').style.display = JOURNAL.trades.length ? 'block' : 'none';
+  if(!trades.length) {
+    el.innerHTML='<div style="color:var(--muted);padding:20px;font-size:12px">'+
+      (JOURNAL.trades.length ? 'No open positions'+(ACTIVE_WL?' in '+ACTIVE_WL:'')+'. Check "Show closed" to see history.' : 'No trades logged yet. Fill in the form above to log your first trade.')+
+      '</div>';
+    return;
+  }
+  el.innerHTML = trades.map(t => {
+    const pnlHtml = t.pnl!=null
+      ? `<div class="tc-field"><label>P&L</label><span class="${t.pnl>=0?'pnl-pos':'pnl-neg'}">${t.pnl>=0?'+':'-'}$${Math.abs(t.pnl).toFixed(2)}</span></div>`
+      : `<div class="tc-field"><label>Target</label><span>$${t.target_profit}</span></div>`;
+    const daysLeft = t.expiry ? Math.ceil((new Date(t.expiry)-new Date())/86400000) : null;
+    const daysHtml = daysLeft!=null ? `<div class="tc-field"><label>DTE</label><span style="color:${daysLeft<5?'var(--red)':daysLeft<14?'var(--amber)':'var(--ink)'}">${daysLeft}d</span></div>` : '';
+    return `<div class="trade-card">
+      <div class="tc-header">
+        <div>
+          <div class="tc-sym">${t.symbol} <span style="font-size:11px;font-weight:400;color:var(--muted)">${t.strikes||''}</span></div>
+          <div class="tc-struct">${t.structure} · ${t.direction}</div>
+          ${t.watchlist?`<div style="font-size:10px;color:var(--faint);margin-top:2px">${t.watchlist}</div>`:''}
+        </div>
+        <span class="tc-status ${t.status==='open'?'st-open':'st-closed'}">${t.status}</span>
+      </div>
+      <div class="tc-grid">
+        <div class="tc-field"><label>Entry</label><span>${t.entry_date}</span></div>
+        <div class="tc-field"><label>Expiry</label><span>${t.expiry||'—'}</span></div>
+        ${daysHtml}
+        <div class="tc-field"><label>Premium</label><span>$${t.premium_paid} × ${t.contracts}</span></div>
+        <div class="tc-field"><label>Max loss</label><span>$${t.max_loss}</span></div>
+        <div class="tc-field"><label>Stop</label><span>$${t.stop_loss}</span></div>
+        ${pnlHtml}
+      </div>
+      ${t.notes?`<div class="tc-notes">${t.notes}</div>`:''}
+      ${t.status==='open'?`<div class="tc-actions">
+        <button class="btn btn-p" onclick="closeTrade('${t.id}')" style="font-size:11px;padding:5px 10px">Close trade</button>
+        <button class="btn btn-d" onclick="deleteTrade('${t.id}')" style="font-size:11px;padding:5px 10px">Delete</button>
+      </div>`:''}
+    </div>`;
+  }).join('');
+}
+
+// ── signals ────────────────────────────────────────────────────
+function buildSectorFilter() {
+  const sectors=[...new Set(SCAN.signals.map(s=>s.sector).filter(Boolean))].sort();
+  const sel=document.getElementById('f-sector');
+  sel.innerHTML='<option value="all">All sectors</option>'+sectors.map(s=>`<option value="${s}">${s}</option>`).join('');
+}
+function buildSectorGrid() {
+  const grid=document.getElementById('sector-grid');
+  const sum=SCAN.sector_summaries;
+  if(!sum||!Object.keys(sum).length){grid.innerHTML='<div style="color:var(--muted);padding:20px">No sector data in this file.</div>';return;}
+  grid.innerHTML=Object.entries(sum).map(([sec,s])=>`
+    <div class="sc" onclick="filterSector('${sec}')">
+      <div class="sc-name">${sec}</div>
+      <div class="sc-bias ${s.sector_bias||'mixed'}">${(s.sector_bias||'mixed').toUpperCase()}</div>
+      <div class="sc-row"><span class="sc-t">▲${s.trade_count||0}</span><span class="sc-w">~${s.watch_count||0}</span><span class="sc-p">✕${s.pass_count||0}</span><span class="sc-b">${s.bullish_pct||0}%bull</span></div>
+    </div>`).join('');
+}
+function filterSector(sec){
+  document.getElementById('f-sector').value=sec;
+  switchTab('signals',document.querySelectorAll('.tab')[0]);
+  renderSignals();
+}
+function renderSignals() {
+  const fv=document.getElementById('f-verdict').value;
+  const fs=document.getElementById('f-sector').value;
+  const fd=document.getElementById('f-dir').value;
+  const fr=document.getElementById('f-regime').value;
+  const fq=document.getElementById('f-search').value.toUpperCase().trim();
+  const ord={TRADE:0,WATCH:1,PASS:2};
+  let sigs=[...SCAN.signals].filter(s=>
+    (fv==='all'||s.verdict===fv)&&(fs==='all'||s.sector===fs)&&
+    (fd==='all'||s.direction===fd)&&(fr==='all'||s.regime===fr)&&
+    (!fq||s.symbol.includes(fq))
+  ).sort((a,b)=>(ord[a.verdict]??9)-(ord[b.verdict]??9)||(a.sector||'').localeCompare(b.sector||''));
+  document.getElementById('showing').textContent=sigs.length+' of '+SCAN.signals.length+' signals';
+  if(!sigs.length){document.getElementById('sig-rows').innerHTML='<tr class="empty-row"><td colspan="9">No signals match filters.</td></tr>';return;}
+  let html='',lastSec='';
+  for(const s of sigs){
+    if(s.sector&&s.sector!==lastSec){
+      const sum=SCAN.sector_summaries?.[s.sector];
+      const bh=sum?` <span class="dir ${sum.sector_bias||'neutral'}" style="font-size:10px">· ${sum.sector_bias||''} ${sum.bullish_pct||0}%bull ${sum.trade_count||0}T ${sum.watch_count||0}W</span>`:'';
+      html+=`<tr class="sec-div"><td colspan="9">${s.sector}${bh}</td></tr>`;
+      lastSec=s.sector;
+    }
+    const ma=(price,ma,l)=>ma==null?`<span style="color:var(--faint)">${l} —</span>`:`<span class="${price>ma?'up':'down'}">${l} ${ma} ${price>ma?'▲':'▼'}</span>`;
+    const fc=f=>f==='accumulation'?'acc':f==='distribution'?'dist':'neut';
+    html+=`<tr>
+      <td><div class="sym">${s.symbol}</div><div class="px">$${s.price||'—'}</div></td>
+      <td><span class="vp v-${s.verdict}">${s.verdict}</span></td>
+      <td><span class="dir ${s.direction}">${s.direction}</span><span class="cv">${s.conviction} conv.</span></td>
+      <td style="font-size:11.5px;line-height:1.8">${ma(s.price,s.ma50,'50')}<br>${ma(s.price,s.ma200,'200')}</td>
+      <td><span class="rb r-${s.regime}">${s.regime}${s.iv_rank!=null?' · '+s.iv_rank:''}</span></td>
+      <td style="font-size:12px;color:var(--blue)">${s.expected_move!=null?'±$'+s.expected_move:'—'}</td>
+      <td class="fc ${fc(s.flow)}">${s.flow||'—'}</td>
+      <td class="strc">${s.structure}</td>
+      <td class="why">${(s.reasons_against||[]).slice(0,2).join('; ')||'—'}</td>
+    </tr>`;
+  }
+  document.getElementById('sig-rows').innerHTML=html;
+}
+
+// ── IV history tab ─────────────────────────────────────────────
+function renderIV() {
+  const ivData = SCAN.iv_history_stats || {};
+  const rows = document.getElementById('iv-rows');
+  if(!Object.keys(ivData).length){
+    rows.innerHTML='<tr class="empty-row"><td colspan="5">No IV history yet. Runs daily with each export. After 20 scans, IV rank becomes real.</td></tr>';
+    return;
+  }
+  const sorted = Object.entries(ivData).sort((a,b)=>b[1].points-a[1].points);
+  rows.innerHTML = sorted.map(([ticker, d]) => {
+    const pct = Math.min(d.points/252*100,100);
+    const status = d.points>=252?'<span style="color:var(--green)">Full 52-wk</span>'
+      : d.points>=20?`<span style="color:var(--amber)">Real rank (${d.points}d)</span>`
+      : `<span style="color:var(--faint)">Proxy (${d.points}d — need 20)</span>`;
+    return `<tr>
+      <td><span class="sym">${ticker}</span></td>
+      <td><div style="display:flex;align-items:center;gap:8px">
+        <div style="flex:1;height:4px;background:var(--border);border-radius:2px">
+          <div style="width:${pct}%;height:100%;background:var(--green);border-radius:2px"></div>
+        </div>${d.points}
+      </div></td>
+      <td>${d.latest_date||'—'}</td>
+      <td>${d.latest_iv!=null?(d.latest_iv*100).toFixed(1)+'%':'—'}</td>
+      <td>${status}</td>
+    </tr>`;
+  }).join('');
+}
+
+// ── tabs ───────────────────────────────────────────────────────
+function switchTab(name,el){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
+  el.classList.add('on');
+  ['signals','sectors','trades','iv'].forEach(n=>{
+    const t=document.getElementById('tab-'+n);
+    if(t) t.style.display=n===name?'':'none';
+  });
+}
+
+// ── init ───────────────────────────────────────────────────────
+loadJournal();
+updateStats();
+
+// Auto-load scan_results.json if served from a web server (GitHub Pages)
+// Falls back gracefully if opened as a local file
+if (window.location.protocol !== 'file:') {
+  fetch('scan_results.json')
+    .then(r => { if (!r.ok) throw new Error('not found'); return r.json(); })
+    .then(d => { ingestScan(d); console.log('Auto-loaded scan_results.json'); })
+    .catch(() => console.log('No scan_results.json found — use Load JSON button'));
+}
+</script>
+</body>
+</html>
