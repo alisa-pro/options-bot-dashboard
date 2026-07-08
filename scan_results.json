@@ -1,64 +1,8 @@
 {
   "account_size": 10000.0,
   "risk_pct": 1.0,
-  "scanned_at": 1783438158.9598439,
+  "scanned_at": 1783522837.2464352,
   "signals": [
-    {
-      "symbol": "NVDA",
-      "verdict": "TRADE",
-      "direction": "bullish",
-      "conviction": "high",
-      "regime": "high-iv",
-      "structure": "cash-secured put / put credit spread",
-      "price": 198.48,
-      "ma50": 187.33,
-      "ma200": 183.98,
-      "iv_rank": 68.1,
-      "expected_move": 4.65,
-      "flow": "accumulation",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross",
-        "flow: accumulation"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "high conviction bullish, high-iv regime \u2014 clean structure available",
-      "sector": "Information Technology",
-      "timestamp": "2026-07-07T15:25:02.906920"
-    },
-    {
-      "symbol": "CSCO",
-      "verdict": "TRADE",
-      "direction": "bullish",
-      "conviction": "high",
-      "regime": "high-iv",
-      "structure": "cash-secured put / put credit spread",
-      "price": 92.63,
-      "ma50": 81.99,
-      "ma200": 75.18,
-      "iv_rank": 100,
-      "expected_move": 7.15,
-      "flow": "accumulation",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross",
-        "flow: accumulation"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "high conviction bullish, high-iv regime \u2014 clean structure available",
-      "sector": "Information Technology",
-      "timestamp": "2026-07-07T15:25:07.656384"
-    },
     {
       "symbol": "INTC",
       "verdict": "TRADE",
@@ -69,8 +13,8 @@
       "price": 95.78,
       "ma50": 56.64,
       "ma200": 40.52,
-      "iv_rank": 67.2,
-      "expected_move": 9.17,
+      "iv_rank": 65.5,
+      "expected_move": 6.4,
       "flow": "accumulation",
       "max_loss": 100.0,
       "position_note": "",
@@ -85,7 +29,7 @@
       ],
       "deciding_reason": "high conviction bullish, high-iv regime \u2014 clean structure available",
       "sector": "Information Technology",
-      "timestamp": "2026-07-07T15:25:09.770035"
+      "timestamp": "2026-07-08T14:55:52.521507"
     },
     {
       "symbol": "KLAC",
@@ -98,7 +42,7 @@
       "ma50": 159.49,
       "ma200": 126.45,
       "iv_rank": 100,
-      "expected_move": 30.84,
+      "expected_move": 20.78,
       "flow": "accumulation",
       "max_loss": 100.0,
       "position_note": "",
@@ -113,20 +57,20 @@
       ],
       "deciding_reason": "high conviction bullish, high-iv regime \u2014 clean structure available",
       "sector": "Information Technology",
-      "timestamp": "2026-07-07T15:25:13.706638"
+      "timestamp": "2026-07-08T14:55:57.573692"
     },
     {
       "symbol": "TXN",
       "verdict": "TRADE",
       "direction": "bullish",
       "conviction": "high",
-      "regime": "mid-iv",
-      "structure": "call debit or put credit spread",
+      "regime": "high-iv",
+      "structure": "cash-secured put / put credit spread",
       "price": 280.89,
       "ma50": 215.86,
       "ma200": 193.33,
-      "iv_rank": 37.4,
-      "expected_move": 14.82,
+      "iv_rank": 54.4,
+      "expected_move": 12.31,
       "flow": "accumulation",
       "max_loss": 100.0,
       "position_note": "",
@@ -139,9 +83,9 @@
       "reasons_against": [
         "OI not reported by provider (free tier) \u2014 verify manually"
       ],
-      "deciding_reason": "high conviction bullish, mid-iv regime \u2014 clean structure available",
+      "deciding_reason": "high conviction bullish, high-iv regime \u2014 clean structure available",
       "sector": "Information Technology",
-      "timestamp": "2026-07-07T15:25:14.454477"
+      "timestamp": "2026-07-08T14:55:58.600104"
     },
     {
       "symbol": "FFIV",
@@ -153,8 +97,8 @@
       "price": 329.93,
       "ma50": 294.63,
       "ma200": 288.35,
-      "iv_rank": 100,
-      "expected_move": 42.01,
+      "iv_rank": 79.2,
+      "expected_move": 28.12,
       "flow": "accumulation",
       "max_loss": 100.0,
       "position_note": "",
@@ -169,7 +113,62 @@
       ],
       "deciding_reason": "high conviction bullish, high-iv regime \u2014 clean structure available",
       "sector": "Information Technology",
-      "timestamp": "2026-07-07T15:25:25.659032"
+      "timestamp": "2026-07-08T14:56:10.934358"
+    },
+    {
+      "symbol": "EPAM",
+      "verdict": "TRADE",
+      "direction": "bearish",
+      "conviction": "high",
+      "regime": "low-iv",
+      "structure": "long put / put debit spread",
+      "price": 110.6,
+      "ma50": 131.65,
+      "ma200": 165.61,
+      "iv_rank": 23.8,
+      "expected_move": 11.42,
+      "flow": "distribution",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [],
+      "reasons_against": [
+        "price < 50-day MA",
+        "price < 200-day MA",
+        "death cross",
+        "flow: distribution",
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "high conviction bearish, low-iv regime \u2014 clean structure available",
+      "sector": "Information Technology",
+      "timestamp": "2026-07-08T14:56:14.219843"
+    },
+    {
+      "symbol": "MCHP",
+      "verdict": "TRADE",
+      "direction": "bullish",
+      "conviction": "high",
+      "regime": "high-iv",
+      "structure": "cash-secured put / put credit spread",
+      "price": 95.3,
+      "ma50": 72.73,
+      "ma200": 68.06,
+      "iv_rank": 100,
+      "expected_move": 4.17,
+      "flow": "accumulation",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [
+        "price > 50-day MA",
+        "price > 200-day MA",
+        "golden cross",
+        "flow: accumulation"
+      ],
+      "reasons_against": [
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "high conviction bullish, high-iv regime \u2014 clean structure available",
+      "sector": "Information Technology",
+      "timestamp": "2026-07-08T14:56:15.306519"
     },
     {
       "symbol": "ABT",
@@ -181,8 +180,8 @@
       "price": 87.54,
       "ma50": 103.57,
       "ma200": 120.39,
-      "iv_rank": 23.0,
-      "expected_move": 3.04,
+      "iv_rank": 23.6,
+      "expected_move": 2.17,
       "flow": "distribution",
       "max_loss": 100.0,
       "position_note": "",
@@ -196,20 +195,20 @@
       ],
       "deciding_reason": "high conviction bearish, low-iv regime \u2014 clean structure available",
       "sector": "Health Care",
-      "timestamp": "2026-07-07T15:25:36.118376"
+      "timestamp": "2026-07-08T14:56:22.167584"
     },
     {
       "symbol": "MDT",
       "verdict": "TRADE",
       "direction": "bearish",
       "conviction": "high",
-      "regime": "low-iv",
-      "structure": "long put / put debit spread",
+      "regime": "high-iv",
+      "structure": "call credit spread",
       "price": 78.3,
       "ma50": 87.93,
       "ma200": 94.1,
-      "iv_rank": 13.2,
-      "expected_move": 1.95,
+      "iv_rank": 65.8,
+      "expected_move": 3.34,
       "flow": "distribution",
       "max_loss": 100.0,
       "position_note": "",
@@ -221,9 +220,9 @@
         "flow: distribution",
         "OI not reported by provider (free tier) \u2014 verify manually"
       ],
-      "deciding_reason": "high conviction bearish, low-iv regime \u2014 clean structure available",
+      "deciding_reason": "high conviction bearish, high-iv regime \u2014 clean structure available",
       "sector": "Health Care",
-      "timestamp": "2026-07-07T15:25:40.695848"
+      "timestamp": "2026-07-08T14:56:27.348532"
     },
     {
       "symbol": "PODD",
@@ -235,8 +234,8 @@
       "price": 171.39,
       "ma50": 214.38,
       "ma200": 281.48,
-      "iv_rank": 16.7,
-      "expected_move": 32.34,
+      "iv_rank": 14.0,
+      "expected_move": 31.01,
       "flow": "distribution",
       "max_loss": 100.0,
       "position_note": "",
@@ -250,34 +249,7 @@
       ],
       "deciding_reason": "high conviction bearish, low-iv regime \u2014 clean structure available",
       "sector": "Health Care",
-      "timestamp": "2026-07-07T15:25:56.595002"
-    },
-    {
-      "symbol": "ICE",
-      "verdict": "TRADE",
-      "direction": "bearish",
-      "conviction": "high",
-      "regime": "high-iv",
-      "structure": "call credit spread",
-      "price": 156.44,
-      "ma50": 160.12,
-      "ma200": 164.61,
-      "iv_rank": 100,
-      "expected_move": 5.01,
-      "flow": "distribution",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [],
-      "reasons_against": [
-        "price < 50-day MA",
-        "price < 200-day MA",
-        "death cross",
-        "flow: distribution",
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "high conviction bearish, high-iv regime \u2014 clean structure available",
-      "sector": "Financials",
-      "timestamp": "2026-07-07T15:26:09.968887"
+      "timestamp": "2026-07-08T14:56:44.730295"
     },
     {
       "symbol": "NKE",
@@ -289,8 +261,8 @@
       "price": 43.09,
       "ma50": 50.94,
       "ma200": 63.89,
-      "iv_rank": 4.9,
-      "expected_move": 1.31,
+      "iv_rank": 7.8,
+      "expected_move": 1.0,
       "flow": "distribution",
       "max_loss": 100.0,
       "position_note": "",
@@ -304,61 +276,7 @@
       ],
       "deciding_reason": "high conviction bearish, low-iv regime \u2014 clean structure available",
       "sector": "Consumer Discretionary",
-      "timestamp": "2026-07-07T15:26:35.784742"
-    },
-    {
-      "symbol": "BKNG",
-      "verdict": "TRADE",
-      "direction": "bearish",
-      "conviction": "high",
-      "regime": "high-iv",
-      "structure": "call credit spread",
-      "price": 165.58,
-      "ma50": 173.84,
-      "ma200": 200.13,
-      "iv_rank": 100,
-      "expected_move": 14.77,
-      "flow": "distribution",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [],
-      "reasons_against": [
-        "price < 50-day MA",
-        "price < 200-day MA",
-        "death cross",
-        "flow: distribution",
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "high conviction bearish, high-iv regime \u2014 clean structure available",
-      "sector": "Consumer Discretionary",
-      "timestamp": "2026-07-07T15:26:38.210009"
-    },
-    {
-      "symbol": "CMG",
-      "verdict": "TRADE",
-      "direction": "bearish",
-      "conviction": "high",
-      "regime": "mid-iv",
-      "structure": "put debit or call credit spread",
-      "price": 31.98,
-      "ma50": 34.27,
-      "ma200": 37.84,
-      "iv_rank": 44.9,
-      "expected_move": 2.02,
-      "flow": "distribution",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [],
-      "reasons_against": [
-        "price < 50-day MA",
-        "price < 200-day MA",
-        "death cross",
-        "flow: distribution",
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "high conviction bearish, mid-iv regime \u2014 clean structure available",
-      "sector": "Consumer Discretionary",
-      "timestamp": "2026-07-07T15:26:38.921376"
+      "timestamp": "2026-07-08T14:57:28.067205"
     },
     {
       "symbol": "PHM",
@@ -371,7 +289,7 @@
       "ma50": 123.73,
       "ma200": 125.49,
       "iv_rank": 100,
-      "expected_move": 7.79,
+      "expected_move": 6.28,
       "flow": "distribution",
       "max_loss": 100.0,
       "position_note": "",
@@ -385,7 +303,7 @@
       ],
       "deciding_reason": "high conviction bearish, high-iv regime \u2014 clean structure available",
       "sector": "Consumer Discretionary",
-      "timestamp": "2026-07-07T15:26:43.813545"
+      "timestamp": "2026-07-08T14:57:38.696195"
     },
     {
       "symbol": "RCL",
@@ -397,8 +315,8 @@
       "price": 259.48,
       "ma50": 278.27,
       "ma200": 299.2,
-      "iv_rank": 54.6,
-      "expected_move": 15.43,
+      "iv_rank": 56.8,
+      "expected_move": 11.12,
       "flow": "distribution",
       "max_loss": 100.0,
       "position_note": "",
@@ -412,20 +330,20 @@
       ],
       "deciding_reason": "high conviction bearish, high-iv regime \u2014 clean structure available",
       "sector": "Consumer Discretionary",
-      "timestamp": "2026-07-07T15:26:51.667366"
+      "timestamp": "2026-07-08T14:57:47.351043"
     },
     {
-      "symbol": "GOOGL",
+      "symbol": "GNRC",
       "verdict": "TRADE",
       "direction": "bullish",
       "conviction": "high",
-      "regime": "mid-iv",
-      "structure": "call debit or put credit spread",
-      "price": 383.25,
-      "ma50": 316.88,
-      "ma200": 282.13,
-      "iv_rank": 41.9,
-      "expected_move": 8.15,
+      "regime": "high-iv",
+      "structure": "cash-secured put / put credit spread",
+      "price": 257.07,
+      "ma50": 213.5,
+      "ma200": 182.24,
+      "iv_rank": 77.9,
+      "expected_move": 12.33,
       "flow": "accumulation",
       "max_loss": 100.0,
       "position_note": "",
@@ -438,64 +356,37 @@
       "reasons_against": [
         "OI not reported by provider (free tier) \u2014 verify manually"
       ],
-      "deciding_reason": "high conviction bullish, mid-iv regime \u2014 clean structure available",
-      "sector": "Communication Services",
-      "timestamp": "2026-07-07T15:27:04.792099"
+      "deciding_reason": "high conviction bullish, high-iv regime \u2014 clean structure available",
+      "sector": "Industrials",
+      "timestamp": "2026-07-08T14:58:33.688816"
     },
     {
-      "symbol": "GOOG",
+      "symbol": "JCI",
       "verdict": "TRADE",
       "direction": "bullish",
-      "conviction": "high",
-      "regime": "mid-iv",
-      "structure": "call debit or put credit spread",
-      "price": 379.64,
-      "ma50": 315.52,
-      "ma200": 282.27,
-      "iv_rank": 31.6,
-      "expected_move": 10.25,
-      "flow": "accumulation",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross",
-        "flow: accumulation"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "high conviction bullish, mid-iv regime \u2014 clean structure available",
-      "sector": "Communication Services",
-      "timestamp": "2026-07-07T15:27:05.519432"
-    },
-    {
-      "symbol": "CHTR",
-      "verdict": "TRADE",
-      "direction": "bearish",
       "conviction": "high",
       "regime": "low-iv",
-      "structure": "long put / put debit spread",
-      "price": 165.34,
-      "ma50": 216.87,
-      "ma200": 234.89,
-      "iv_rank": 14.8,
-      "expected_move": 9.78,
-      "flow": "distribution",
+      "structure": "long call / call debit spread",
+      "price": 144.4,
+      "ma50": 137.81,
+      "ma200": 120.08,
+      "iv_rank": 25.5,
+      "expected_move": 20.35,
+      "flow": "accumulation",
       "max_loss": 100.0,
       "position_note": "",
-      "reasons_for": [],
+      "reasons_for": [
+        "price > 50-day MA",
+        "price > 200-day MA",
+        "golden cross",
+        "flow: accumulation"
+      ],
       "reasons_against": [
-        "price < 50-day MA",
-        "price < 200-day MA",
-        "death cross",
-        "flow: distribution",
         "OI not reported by provider (free tier) \u2014 verify manually"
       ],
-      "deciding_reason": "high conviction bearish, low-iv regime \u2014 clean structure available",
-      "sector": "Communication Services",
-      "timestamp": "2026-07-07T15:27:08.591384"
+      "deciding_reason": "high conviction bullish, low-iv regime \u2014 clean structure available",
+      "sector": "Industrials",
+      "timestamp": "2026-07-08T14:58:37.407655"
     },
     {
       "symbol": "WMT",
@@ -508,7 +399,7 @@
       "ma50": 125.87,
       "ma200": 112.55,
       "iv_rank": 100,
-      "expected_move": 6.67,
+      "expected_move": 7.88,
       "flow": "accumulation",
       "max_loss": 100.0,
       "position_note": "",
@@ -523,411 +414,20 @@
       ],
       "deciding_reason": "high conviction bullish, high-iv regime \u2014 clean structure available",
       "sector": "Consumer Staples",
-      "timestamp": "2026-07-07T15:27:44.757618"
+      "timestamp": "2026-07-08T14:58:45.583382"
     },
     {
-      "symbol": "EOG",
-      "verdict": "TRADE",
-      "direction": "bullish",
-      "conviction": "high",
-      "regime": "mid-iv",
-      "structure": "call debit or put credit spread",
-      "price": 141.61,
-      "ma50": 135.2,
-      "ma200": 117.96,
-      "iv_rank": 43.2,
-      "expected_move": 6.15,
-      "flow": "accumulation",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross",
-        "flow: accumulation"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "high conviction bullish, mid-iv regime \u2014 clean structure available",
-      "sector": "Energy",
-      "timestamp": "2026-07-07T15:28:02.634219"
-    },
-    {
-      "symbol": "MPC",
-      "verdict": "TRADE",
-      "direction": "bullish",
-      "conviction": "high",
-      "regime": "low-iv",
-      "structure": "long call / call debit spread",
-      "price": 252.54,
-      "ma50": 227.19,
-      "ma200": 193.63,
-      "iv_rank": 0.2,
-      "expected_move": 32.8,
-      "flow": "accumulation",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross",
-        "flow: accumulation"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "high conviction bullish, low-iv regime \u2014 clean structure available",
-      "sector": "Energy",
-      "timestamp": "2026-07-07T15:28:04.057923"
-    },
-    {
-      "symbol": "OXY",
-      "verdict": "TRADE",
-      "direction": "bullish",
-      "conviction": "high",
-      "regime": "mid-iv",
-      "structure": "call debit or put credit spread",
-      "price": 60.27,
-      "ma50": 57.86,
-      "ma200": 47.23,
-      "iv_rank": 45.6,
-      "expected_move": 3.76,
-      "flow": "accumulation",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross",
-        "flow: accumulation"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "high conviction bullish, mid-iv regime \u2014 clean structure available",
-      "sector": "Energy",
-      "timestamp": "2026-07-07T15:28:06.293777"
-    },
-    {
-      "symbol": "AR",
-      "verdict": "TRADE",
-      "direction": "bullish",
-      "conviction": "high",
-      "regime": "high-iv",
-      "structure": "cash-secured put / put credit spread",
-      "price": 39.53,
-      "ma50": 39.22,
-      "ma200": 34.85,
-      "iv_rank": 100,
-      "expected_move": 3.88,
-      "flow": "accumulation",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross",
-        "flow: accumulation"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "high conviction bullish, high-iv regime \u2014 clean structure available",
-      "sector": "Energy",
-      "timestamp": "2026-07-07T15:28:12.100202"
-    },
-    {
-      "symbol": "WMB",
-      "verdict": "TRADE",
-      "direction": "bullish",
-      "conviction": "high",
-      "regime": "low-iv",
-      "structure": "long call / call debit spread",
-      "price": 75.41,
-      "ma50": 73.26,
-      "ma200": 64.07,
-      "iv_rank": 17.7,
-      "expected_move": 3.36,
-      "flow": "accumulation",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross",
-        "flow: accumulation"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "high conviction bullish, low-iv regime \u2014 clean structure available",
-      "sector": "Energy",
-      "timestamp": "2026-07-07T15:28:13.869250"
-    },
-    {
-      "symbol": "OKE",
-      "verdict": "TRADE",
-      "direction": "bullish",
-      "conviction": "high",
-      "regime": "mid-iv",
-      "structure": "call debit or put credit spread",
-      "price": 90.63,
-      "ma50": 87.2,
-      "ma200": 77.46,
-      "iv_rank": 40.8,
-      "expected_move": 4.43,
-      "flow": "accumulation",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross",
-        "flow: accumulation"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "high conviction bullish, mid-iv regime \u2014 clean structure available",
-      "sector": "Energy",
-      "timestamp": "2026-07-07T15:28:14.664277"
-    },
-    {
-      "symbol": "WELL",
-      "verdict": "TRADE",
-      "direction": "bullish",
-      "conviction": "high",
-      "regime": "mid-iv",
-      "structure": "call debit or put credit spread",
-      "price": 217.14,
-      "ma50": 206.32,
-      "ma200": 187.37,
-      "iv_rank": 33.8,
-      "expected_move": 10.17,
-      "flow": "accumulation",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross",
-        "flow: accumulation"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "high conviction bullish, mid-iv regime \u2014 clean structure available",
-      "sector": "Real Estate",
-      "timestamp": "2026-07-07T15:28:42.667111"
-    },
-    {
-      "symbol": "DLR",
-      "verdict": "TRADE",
-      "direction": "bullish",
-      "conviction": "high",
-      "regime": "high-iv",
-      "structure": "cash-secured put / put credit spread",
-      "price": 198.51,
-      "ma50": 185.56,
-      "ma200": 171.42,
-      "iv_rank": 90.9,
-      "expected_move": 13.45,
-      "flow": "accumulation",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross",
-        "flow: accumulation"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "high conviction bullish, high-iv regime \u2014 clean structure available",
-      "sector": "Real Estate",
-      "timestamp": "2026-07-07T15:28:43.399350"
-    },
-    {
-      "symbol": "SPG",
-      "verdict": "TRADE",
-      "direction": "bullish",
-      "conviction": "high",
-      "regime": "low-iv",
-      "structure": "long call / call debit spread",
-      "price": 201.51,
-      "ma50": 195.44,
-      "ma200": 184.72,
-      "iv_rank": 27.9,
-      "expected_move": 22.12,
-      "flow": "accumulation",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross",
-        "flow: accumulation"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "high conviction bullish, low-iv regime \u2014 clean structure available",
-      "sector": "Real Estate",
-      "timestamp": "2026-07-07T15:28:44.740539"
-    },
-    {
-      "symbol": "VTR",
-      "verdict": "TRADE",
-      "direction": "bullish",
-      "conviction": "high",
-      "regime": "high-iv",
-      "structure": "cash-secured put / put credit spread",
-      "price": 87.79,
-      "ma50": 84.93,
-      "ma200": 76.51,
-      "iv_rank": 54.9,
-      "expected_move": 8.57,
-      "flow": "accumulation",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross",
-        "flow: accumulation"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "high conviction bullish, high-iv regime \u2014 clean structure available",
-      "sector": "Real Estate",
-      "timestamp": "2026-07-07T15:28:45.463425"
-    },
-    {
-      "symbol": "NNN",
-      "verdict": "TRADE",
-      "direction": "bullish",
-      "conviction": "high",
-      "regime": "low-iv",
-      "structure": "long call / call debit spread",
-      "price": 44.06,
-      "ma50": 44.02,
-      "ma200": 42.3,
-      "iv_rank": 12.0,
-      "expected_move": 3.27,
-      "flow": "accumulation",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross",
-        "flow: accumulation"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "high conviction bullish, low-iv regime \u2014 clean structure available",
-      "sector": "Real Estate",
-      "timestamp": "2026-07-07T15:28:49.285576"
-    },
-    {
-      "symbol": "IRM",
-      "verdict": "TRADE",
-      "direction": "bullish",
-      "conviction": "high",
-      "regime": "high-iv",
-      "structure": "cash-secured put / put credit spread",
-      "price": 128.22,
-      "ma50": 109.58,
-      "ma200": 98.29,
-      "iv_rank": 100,
-      "expected_move": 6.95,
-      "flow": "accumulation",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross",
-        "flow: accumulation"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "high conviction bullish, high-iv regime \u2014 clean structure available",
-      "sector": "Real Estate",
-      "timestamp": "2026-07-07T15:28:52.921307"
-    },
-    {
-      "symbol": "CF",
-      "verdict": "TRADE",
-      "direction": "bullish",
-      "conviction": "high",
-      "regime": "low-iv",
-      "structure": "long call / call debit spread",
-      "price": 125.89,
-      "ma50": 120.15,
-      "ma200": 94.41,
-      "iv_rank": 26.4,
-      "expected_move": 4.75,
-      "flow": "accumulation",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross",
-        "flow: accumulation"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "high conviction bullish, low-iv regime \u2014 clean structure available",
-      "sector": "Materials",
-      "timestamp": "2026-07-07T15:29:05.006159"
-    },
-    {
-      "symbol": "FMC",
-      "verdict": "TRADE",
-      "direction": "bearish",
-      "conviction": "high",
-      "regime": "mid-iv",
-      "structure": "put debit or call credit spread",
-      "price": 14.56,
-      "ma50": 15.39,
-      "ma200": 22.46,
-      "iv_rank": 46.0,
-      "expected_move": 3.17,
-      "flow": "distribution",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [],
-      "reasons_against": [
-        "price < 50-day MA",
-        "price < 200-day MA",
-        "death cross",
-        "flow: distribution",
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "high conviction bearish, mid-iv regime \u2014 clean structure available",
-      "sector": "Materials",
-      "timestamp": "2026-07-07T15:29:05.748224"
-    },
-    {
-      "symbol": "AVY",
+      "symbol": "CLX",
       "verdict": "TRADE",
       "direction": "bearish",
       "conviction": "high",
       "regime": "low-iv",
       "structure": "long put / put debit spread",
-      "price": 160.46,
-      "ma50": 173.3,
-      "ma200": 174.97,
-      "iv_rank": 27.5,
-      "expected_move": 8.07,
+      "price": 86.48,
+      "ma50": 107.18,
+      "ma200": 112.99,
+      "iv_rank": 27.4,
+      "expected_move": 5.53,
       "flow": "distribution",
       "max_loss": 100.0,
       "position_note": "",
@@ -940,8 +440,399 @@
         "OI not reported by provider (free tier) \u2014 verify manually"
       ],
       "deciding_reason": "high conviction bearish, low-iv regime \u2014 clean structure available",
+      "sector": "Consumer Staples",
+      "timestamp": "2026-07-08T14:58:55.327824"
+    },
+    {
+      "symbol": "TSN",
+      "verdict": "TRADE",
+      "direction": "bullish",
+      "conviction": "high",
+      "regime": "mid-iv",
+      "structure": "call debit or put credit spread",
+      "price": 68.75,
+      "ma50": 63.16,
+      "ma200": 58.29,
+      "iv_rank": 39.7,
+      "expected_move": 2.92,
+      "flow": "accumulation",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [
+        "price > 50-day MA",
+        "price > 200-day MA",
+        "golden cross",
+        "flow: accumulation"
+      ],
+      "reasons_against": [
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "high conviction bullish, mid-iv regime \u2014 clean structure available",
+      "sector": "Consumer Staples",
+      "timestamp": "2026-07-08T14:58:58.120471"
+    },
+    {
+      "symbol": "MPC",
+      "verdict": "TRADE",
+      "direction": "bullish",
+      "conviction": "high",
+      "regime": "low-iv",
+      "structure": "long call / call debit spread",
+      "price": 252.54,
+      "ma50": 227.19,
+      "ma200": 193.63,
+      "iv_rank": 4.4,
+      "expected_move": 14.92,
+      "flow": "accumulation",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [
+        "price > 50-day MA",
+        "price > 200-day MA",
+        "golden cross",
+        "flow: accumulation"
+      ],
+      "reasons_against": [
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "high conviction bullish, low-iv regime \u2014 clean structure available",
+      "sector": "Energy",
+      "timestamp": "2026-07-08T14:59:06.721662"
+    },
+    {
+      "symbol": "VLO",
+      "verdict": "TRADE",
+      "direction": "bullish",
+      "conviction": "high",
+      "regime": "high-iv",
+      "structure": "cash-secured put / put credit spread",
+      "price": 251.63,
+      "ma50": 233.35,
+      "ma200": 183.61,
+      "iv_rank": 77.1,
+      "expected_move": 13.26,
+      "flow": "accumulation",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [
+        "price > 50-day MA",
+        "price > 200-day MA",
+        "golden cross",
+        "flow: accumulation"
+      ],
+      "reasons_against": [
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "high conviction bullish, high-iv regime \u2014 clean structure available",
+      "sector": "Energy",
+      "timestamp": "2026-07-08T14:59:07.492992"
+    },
+    {
+      "symbol": "AR",
+      "verdict": "TRADE",
+      "direction": "bullish",
+      "conviction": "high",
+      "regime": "high-iv",
+      "structure": "cash-secured put / put credit spread",
+      "price": 39.53,
+      "ma50": 39.22,
+      "ma200": 34.85,
+      "iv_rank": 100,
+      "expected_move": 2.13,
+      "flow": "accumulation",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [
+        "price > 50-day MA",
+        "price > 200-day MA",
+        "golden cross",
+        "flow: accumulation"
+      ],
+      "reasons_against": [
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "high conviction bullish, high-iv regime \u2014 clean structure available",
+      "sector": "Energy",
+      "timestamp": "2026-07-08T14:59:14.855298"
+    },
+    {
+      "symbol": "CQP",
+      "verdict": "TRADE",
+      "direction": "bullish",
+      "conviction": "high",
+      "regime": "low-iv",
+      "structure": "long call / call debit spread",
+      "price": 66.7,
+      "ma50": 63.89,
+      "ma200": 56.66,
+      "iv_rank": 2.5,
+      "expected_move": 2.37,
+      "flow": "accumulation",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [
+        "price > 50-day MA",
+        "price > 200-day MA",
+        "golden cross",
+        "flow: accumulation"
+      ],
+      "reasons_against": [
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "high conviction bullish, low-iv regime \u2014 clean structure available",
+      "sector": "Energy",
+      "timestamp": "2026-07-08T14:59:20.451010"
+    },
+    {
+      "symbol": "FANG",
+      "verdict": "TRADE",
+      "direction": "bullish",
+      "conviction": "high",
+      "regime": "low-iv",
+      "structure": "long call / call debit spread",
+      "price": 213.69,
+      "ma50": 188.45,
+      "ma200": 158.37,
+      "iv_rank": 19.2,
+      "expected_move": 26.98,
+      "flow": "accumulation",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [
+        "price > 50-day MA",
+        "price > 200-day MA",
+        "golden cross",
+        "flow: accumulation"
+      ],
+      "reasons_against": [
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "high conviction bullish, low-iv regime \u2014 clean structure available",
+      "sector": "Energy",
+      "timestamp": "2026-07-08T14:59:21.220153"
+    },
+    {
+      "symbol": "MTDR",
+      "verdict": "TRADE",
+      "direction": "bullish",
+      "conviction": "high",
+      "regime": "high-iv",
+      "structure": "cash-secured put / put credit spread",
+      "price": 63.82,
+      "ma50": 58.47,
+      "ma200": 48.24,
+      "iv_rank": 61.8,
+      "expected_move": 5.52,
+      "flow": "accumulation",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [
+        "price > 50-day MA",
+        "price > 200-day MA",
+        "golden cross",
+        "flow: accumulation"
+      ],
+      "reasons_against": [
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "high conviction bullish, high-iv regime \u2014 clean structure available",
+      "sector": "Energy",
+      "timestamp": "2026-07-08T14:59:24.412427"
+    },
+    {
+      "symbol": "NOV",
+      "verdict": "TRADE",
+      "direction": "bullish",
+      "conviction": "high",
+      "regime": "high-iv",
+      "structure": "cash-secured put / put credit spread",
+      "price": 19.95,
+      "ma50": 19.43,
+      "ma200": 16.08,
+      "iv_rank": 53.3,
+      "expected_move": 1.36,
+      "flow": "accumulation",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [
+        "price > 50-day MA",
+        "price > 200-day MA",
+        "golden cross",
+        "flow: accumulation"
+      ],
+      "reasons_against": [
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "high conviction bullish, high-iv regime \u2014 clean structure available",
+      "sector": "Energy",
+      "timestamp": "2026-07-08T14:59:25.379949"
+    },
+    {
+      "symbol": "WELL",
+      "verdict": "TRADE",
+      "direction": "bullish",
+      "conviction": "high",
+      "regime": "mid-iv",
+      "structure": "call debit or put credit spread",
+      "price": 217.14,
+      "ma50": 206.32,
+      "ma200": 187.37,
+      "iv_rank": 39.4,
+      "expected_move": 23.08,
+      "flow": "accumulation",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [
+        "price > 50-day MA",
+        "price > 200-day MA",
+        "golden cross",
+        "flow: accumulation"
+      ],
+      "reasons_against": [
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "high conviction bullish, mid-iv regime \u2014 clean structure available",
+      "sector": "Real Estate",
+      "timestamp": "2026-07-08T14:59:48.451101"
+    },
+    {
+      "symbol": "SPG",
+      "verdict": "TRADE",
+      "direction": "bullish",
+      "conviction": "high",
+      "regime": "high-iv",
+      "structure": "cash-secured put / put credit spread",
+      "price": 201.51,
+      "ma50": 195.44,
+      "ma200": 184.72,
+      "iv_rank": 89.9,
+      "expected_move": 15.65,
+      "flow": "accumulation",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [
+        "price > 50-day MA",
+        "price > 200-day MA",
+        "golden cross",
+        "flow: accumulation"
+      ],
+      "reasons_against": [
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "high conviction bullish, high-iv regime \u2014 clean structure available",
+      "sector": "Real Estate",
+      "timestamp": "2026-07-08T14:59:50.739990"
+    },
+    {
+      "symbol": "NNN",
+      "verdict": "TRADE",
+      "direction": "bullish",
+      "conviction": "high",
+      "regime": "low-iv",
+      "structure": "long call / call debit spread",
+      "price": 44.06,
+      "ma50": 44.02,
+      "ma200": 42.3,
+      "iv_rank": 24.8,
+      "expected_move": 2.83,
+      "flow": "accumulation",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [
+        "price > 50-day MA",
+        "price > 200-day MA",
+        "golden cross",
+        "flow: accumulation"
+      ],
+      "reasons_against": [
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "high conviction bullish, low-iv regime \u2014 clean structure available",
+      "sector": "Real Estate",
+      "timestamp": "2026-07-08T14:59:55.803862"
+    },
+    {
+      "symbol": "CF",
+      "verdict": "TRADE",
+      "direction": "bullish",
+      "conviction": "high",
+      "regime": "high-iv",
+      "structure": "cash-secured put / put credit spread",
+      "price": 125.89,
+      "ma50": 120.15,
+      "ma200": 94.41,
+      "iv_rank": 59.9,
+      "expected_move": 4.66,
+      "flow": "accumulation",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [
+        "price > 50-day MA",
+        "price > 200-day MA",
+        "golden cross",
+        "flow: accumulation"
+      ],
+      "reasons_against": [
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "high conviction bullish, high-iv regime \u2014 clean structure available",
       "sector": "Materials",
-      "timestamp": "2026-07-07T15:29:10.890416"
+      "timestamp": "2026-07-08T15:00:17.647356"
+    },
+    {
+      "symbol": "FMC",
+      "verdict": "TRADE",
+      "direction": "bearish",
+      "conviction": "high",
+      "regime": "high-iv",
+      "structure": "call credit spread",
+      "price": 14.56,
+      "ma50": 15.39,
+      "ma200": 22.46,
+      "iv_rank": 50.4,
+      "expected_move": 3.27,
+      "flow": "distribution",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [],
+      "reasons_against": [
+        "price < 50-day MA",
+        "price < 200-day MA",
+        "death cross",
+        "flow: distribution",
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "high conviction bearish, high-iv regime \u2014 clean structure available",
+      "sector": "Materials",
+      "timestamp": "2026-07-08T15:00:18.787391"
+    },
+    {
+      "symbol": "NVDA",
+      "verdict": "WATCH",
+      "direction": "bullish",
+      "conviction": "high",
+      "regime": "unknown",
+      "structure": "call debit or put credit spread",
+      "price": 198.48,
+      "ma50": 187.33,
+      "ma200": 183.98,
+      "iv_rank": null,
+      "expected_move": null,
+      "flow": "accumulation",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [
+        "price > 50-day MA",
+        "price > 200-day MA",
+        "golden cross",
+        "flow: accumulation"
+      ],
+      "reasons_against": [
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "high conviction bullish \u2014 verify IV regime before sizing",
+      "sector": "Information Technology",
+      "timestamp": "2026-07-08T14:55:45.777662"
     },
     {
       "symbol": "AVGO",
@@ -969,7 +860,7 @@
       ],
       "deciding_reason": "high conviction bullish \u2014 verify IV regime before sizing",
       "sector": "Information Technology",
-      "timestamp": "2026-07-07T15:25:03.649069"
+      "timestamp": "2026-07-08T14:55:46.690043"
     },
     {
       "symbol": "AMD",
@@ -997,7 +888,7 @@
       ],
       "deciding_reason": "high conviction bullish \u2014 verify IV regime before sizing",
       "sector": "Information Technology",
-      "timestamp": "2026-07-07T15:25:04.564130"
+      "timestamp": "2026-07-08T14:55:47.497084"
     },
     {
       "symbol": "LRCX",
@@ -1025,7 +916,7 @@
       ],
       "deciding_reason": "high conviction bullish \u2014 verify IV regime before sizing",
       "sector": "Information Technology",
-      "timestamp": "2026-07-07T15:25:12.120001"
+      "timestamp": "2026-07-08T14:55:55.697840"
     },
     {
       "symbol": "MU",
@@ -1053,7 +944,7 @@
       ],
       "deciding_reason": "high conviction bullish \u2014 verify IV regime before sizing",
       "sector": "Information Technology",
-      "timestamp": "2026-07-07T15:25:12.943655"
+      "timestamp": "2026-07-08T14:55:56.506453"
     },
     {
       "symbol": "HPE",
@@ -1081,7 +972,35 @@
       ],
       "deciding_reason": "high conviction bullish \u2014 verify IV regime before sizing",
       "sector": "Information Technology",
-      "timestamp": "2026-07-07T15:25:21.710479"
+      "timestamp": "2026-07-08T14:56:07.090075"
+    },
+    {
+      "symbol": "CVS",
+      "verdict": "WATCH",
+      "direction": "bullish",
+      "conviction": "high",
+      "regime": "unknown",
+      "structure": "call debit or put credit spread",
+      "price": 82.01,
+      "ma50": 76.61,
+      "ma200": 75.69,
+      "iv_rank": null,
+      "expected_move": null,
+      "flow": "accumulation",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [
+        "price > 50-day MA",
+        "price > 200-day MA",
+        "golden cross",
+        "flow: accumulation"
+      ],
+      "reasons_against": [
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "high conviction bullish \u2014 verify IV regime before sizing",
+      "sector": "Health Care",
+      "timestamp": "2026-07-08T14:56:28.462983"
     },
     {
       "symbol": "COF",
@@ -1107,7 +1026,7 @@
       ],
       "deciding_reason": "high conviction bearish \u2014 verify IV regime before sizing",
       "sector": "Financials",
-      "timestamp": "2026-07-07T15:26:25.195479"
+      "timestamp": "2026-07-08T14:57:15.585003"
     },
     {
       "symbol": "LEN",
@@ -1133,7 +1052,62 @@
       ],
       "deciding_reason": "high conviction bearish \u2014 verify IV regime before sizing",
       "sector": "Consumer Discretionary",
-      "timestamp": "2026-07-07T15:26:43.110967"
+      "timestamp": "2026-07-08T14:57:37.815106"
+    },
+    {
+      "symbol": "GOOGL",
+      "verdict": "WATCH",
+      "direction": "bullish",
+      "conviction": "high",
+      "regime": "unknown",
+      "structure": "call debit or put credit spread",
+      "price": 383.25,
+      "ma50": 316.88,
+      "ma200": 282.13,
+      "iv_rank": null,
+      "expected_move": null,
+      "flow": "accumulation",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [
+        "price > 50-day MA",
+        "price > 200-day MA",
+        "golden cross",
+        "flow: accumulation"
+      ],
+      "reasons_against": [
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "high conviction bullish \u2014 verify IV regime before sizing",
+      "sector": "Communication Services",
+      "timestamp": "2026-07-08T14:58:01.477975"
+    },
+    {
+      "symbol": "CHTR",
+      "verdict": "WATCH",
+      "direction": "bearish",
+      "conviction": "high",
+      "regime": "unknown",
+      "structure": "put debit or call credit spread",
+      "price": 165.34,
+      "ma50": 216.87,
+      "ma200": 234.89,
+      "iv_rank": null,
+      "expected_move": null,
+      "flow": "distribution",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [],
+      "reasons_against": [
+        "price < 50-day MA",
+        "price < 200-day MA",
+        "death cross",
+        "flow: distribution",
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "high conviction bearish \u2014 verify IV regime before sizing",
+      "sector": "Communication Services",
+      "timestamp": "2026-07-08T14:58:06.222607"
     },
     {
       "symbol": "LUMN",
@@ -1161,7 +1135,7 @@
       ],
       "deciding_reason": "high conviction bullish \u2014 verify IV regime before sizing",
       "sector": "Communication Services",
-      "timestamp": "2026-07-07T15:27:15.062259"
+      "timestamp": "2026-07-08T14:58:13.229838"
     },
     {
       "symbol": "UAL",
@@ -1188,7 +1162,7 @@
       ],
       "deciding_reason": "high conviction bearish \u2014 verify IV regime before sizing",
       "sector": "Industrials",
-      "timestamp": "2026-07-07T15:27:29.684025"
+      "timestamp": "2026-07-08T14:58:29.321626"
     },
     {
       "symbol": "APA",
@@ -1216,7 +1190,7 @@
       ],
       "deciding_reason": "high conviction bullish \u2014 verify IV regime before sizing",
       "sector": "Energy",
-      "timestamp": "2026-07-07T15:28:08.808945"
+      "timestamp": "2026-07-08T14:59:11.701750"
     },
     {
       "symbol": "HAL",
@@ -1244,7 +1218,7 @@
       ],
       "deciding_reason": "high conviction bullish \u2014 verify IV regime before sizing",
       "sector": "Energy",
-      "timestamp": "2026-07-07T15:28:09.524636"
+      "timestamp": "2026-07-08T14:59:12.430333"
     },
     {
       "symbol": "CIVI",
@@ -1271,20 +1245,76 @@
       ],
       "deciding_reason": "high conviction bearish \u2014 verify IV regime before sizing",
       "sector": "Energy",
-      "timestamp": "2026-07-07T15:28:18.892165"
+      "timestamp": "2026-07-08T14:59:21.979205"
+    },
+    {
+      "symbol": "DLR",
+      "verdict": "WATCH",
+      "direction": "bullish",
+      "conviction": "high",
+      "regime": "unknown",
+      "structure": "call debit or put credit spread",
+      "price": 198.51,
+      "ma50": 185.56,
+      "ma200": 171.42,
+      "iv_rank": null,
+      "expected_move": null,
+      "flow": "accumulation",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [
+        "price > 50-day MA",
+        "price > 200-day MA",
+        "golden cross",
+        "flow: accumulation"
+      ],
+      "reasons_against": [
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "high conviction bullish \u2014 verify IV regime before sizing",
+      "sector": "Real Estate",
+      "timestamp": "2026-07-08T14:59:49.265535"
+    },
+    {
+      "symbol": "IRM",
+      "verdict": "WATCH",
+      "direction": "bullish",
+      "conviction": "high",
+      "regime": "unknown",
+      "structure": "call debit or put credit spread",
+      "price": 128.22,
+      "ma50": 109.58,
+      "ma200": 98.29,
+      "iv_rank": null,
+      "expected_move": null,
+      "flow": "accumulation",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [
+        "price > 50-day MA",
+        "price > 200-day MA",
+        "golden cross",
+        "flow: accumulation"
+      ],
+      "reasons_against": [
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "high conviction bullish \u2014 verify IV regime before sizing",
+      "sector": "Real Estate",
+      "timestamp": "2026-07-08T14:59:59.747152"
     },
     {
       "symbol": "AAPL",
       "verdict": "WATCH",
       "direction": "bullish",
       "conviction": "med",
-      "regime": "high-iv",
-      "structure": "cash-secured put / put credit spread",
+      "regime": "unknown",
+      "structure": "call debit or put credit spread",
       "price": 276.83,
       "ma50": 261.46,
       "ma200": 255.52,
-      "iv_rank": 100,
-      "expected_move": 12.19,
+      "iv_rank": null,
+      "expected_move": null,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -1298,7 +1328,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Information Technology",
-      "timestamp": "2026-07-07T15:25:00.605348"
+      "timestamp": "2026-07-08T14:55:44.505333"
     },
     {
       "symbol": "ACN",
@@ -1324,7 +1354,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Information Technology",
-      "timestamp": "2026-07-07T15:25:06.775557"
+      "timestamp": "2026-07-08T14:55:49.784535"
     },
     {
       "symbol": "IBM",
@@ -1350,7 +1380,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Information Technology",
-      "timestamp": "2026-07-07T15:25:08.489938"
+      "timestamp": "2026-07-08T14:55:51.583150"
     },
     {
       "symbol": "AMAT",
@@ -1377,7 +1407,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Information Technology",
-      "timestamp": "2026-07-07T15:25:10.537206"
+      "timestamp": "2026-07-08T14:55:53.523942"
     },
     {
       "symbol": "SNPS",
@@ -1390,7 +1420,7 @@
       "ma50": 433.08,
       "ma200": 479.03,
       "iv_rank": 100,
-      "expected_move": 43.62,
+      "expected_move": 27.1,
       "flow": "accumulation",
       "max_loss": 100.0,
       "position_note": "",
@@ -1405,35 +1435,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Information Technology",
-      "timestamp": "2026-07-07T15:25:16.625410"
-    },
-    {
-      "symbol": "CDNS",
-      "verdict": "WATCH",
-      "direction": "bullish",
-      "conviction": "med",
-      "regime": "high-iv",
-      "structure": "cash-secured put / put credit spread",
-      "price": 349.51,
-      "ma50": 298.77,
-      "ma200": 321.81,
-      "iv_rank": 50.5,
-      "expected_move": 15.62,
-      "flow": "accumulation",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "flow: accumulation"
-      ],
-      "reasons_against": [
-        "death cross",
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "med conviction \u2014 wait for confirmation",
-      "sector": "Information Technology",
-      "timestamp": "2026-07-07T15:25:17.450358"
+      "timestamp": "2026-07-08T14:56:01.074708"
     },
     {
       "symbol": "FTNT",
@@ -1461,7 +1463,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Information Technology",
-      "timestamp": "2026-07-07T15:25:18.192598"
+      "timestamp": "2026-07-08T14:56:02.832239"
     },
     {
       "symbol": "CRWD",
@@ -1489,76 +1491,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Information Technology",
-      "timestamp": "2026-07-07T15:25:19.261544"
+      "timestamp": "2026-07-08T14:56:04.077894"
     },
     {
-      "symbol": "NTAP",
-      "verdict": "WATCH",
-      "direction": "bullish",
-      "conviction": "med",
-      "regime": "high-iv",
-      "structure": "cash-secured put / put credit spread",
-      "price": 110.94,
-      "ma50": 102.6,
-      "ma200": 108.95,
-      "iv_rank": 100.0,
-      "expected_move": 20.58,
-      "flow": "accumulation",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "flow: accumulation"
-      ],
-      "reasons_against": [
-        "death cross",
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "med conviction \u2014 wait for confirmation",
-      "sector": "Information Technology",
-      "timestamp": "2026-07-07T15:25:23.638396"
-    },
-    {
-      "symbol": "SWKS",
-      "verdict": "WATCH",
-      "direction": "bullish",
-      "conviction": "med",
-      "regime": "mid-iv",
-      "structure": "call debit or put credit spread",
-      "price": 68.85,
-      "ma50": 57.81,
-      "ma200": 66.29,
-      "iv_rank": 38.4,
-      "expected_move": 16.93,
-      "flow": "accumulation",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "flow: accumulation"
-      ],
-      "reasons_against": [
-        "death cross",
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "med conviction \u2014 wait for confirmation",
-      "sector": "Information Technology",
-      "timestamp": "2026-07-07T15:25:24.862525"
-    },
-    {
-      "symbol": "GEN",
+      "symbol": "IT",
       "verdict": "WATCH",
       "direction": "bearish",
       "conviction": "med",
-      "regime": "high-iv",
-      "structure": "call credit spread",
-      "price": 19.63,
-      "ma50": 20.24,
-      "ma200": 25.66,
-      "iv_rank": 67.3,
-      "expected_move": 2.35,
+      "regime": "low-iv",
+      "structure": "long put / put debit spread",
+      "price": 147.71,
+      "ma50": 155.62,
+      "ma200": 220.83,
+      "iv_rank": 22.5,
+      "expected_move": 29.71,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -1571,20 +1517,74 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Information Technology",
-      "timestamp": "2026-07-07T15:25:26.431206"
+      "timestamp": "2026-07-08T14:56:06.300576"
+    },
+    {
+      "symbol": "NTAP",
+      "verdict": "WATCH",
+      "direction": "bullish",
+      "conviction": "med",
+      "regime": "high-iv",
+      "structure": "cash-secured put / put credit spread",
+      "price": 110.94,
+      "ma50": 102.6,
+      "ma200": 108.95,
+      "iv_rank": 100,
+      "expected_move": 23.14,
+      "flow": "accumulation",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [
+        "price > 50-day MA",
+        "price > 200-day MA",
+        "flow: accumulation"
+      ],
+      "reasons_against": [
+        "death cross",
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "med conviction \u2014 wait for confirmation",
+      "sector": "Information Technology",
+      "timestamp": "2026-07-08T14:56:09.016693"
+    },
+    {
+      "symbol": "GEN",
+      "verdict": "WATCH",
+      "direction": "bearish",
+      "conviction": "med",
+      "regime": "low-iv",
+      "structure": "long put / put debit spread",
+      "price": 19.63,
+      "ma50": 20.24,
+      "ma200": 25.66,
+      "iv_rank": 28.4,
+      "expected_move": 1.43,
+      "flow": "neutral",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [],
+      "reasons_against": [
+        "price < 50-day MA",
+        "price < 200-day MA",
+        "death cross",
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "med conviction \u2014 wait for confirmation",
+      "sector": "Information Technology",
+      "timestamp": "2026-07-08T14:56:11.761066"
     },
     {
       "symbol": "ENPH",
       "verdict": "WATCH",
       "direction": "bearish",
       "conviction": "med",
-      "regime": "high-iv",
-      "structure": "call credit spread",
+      "regime": "unknown",
+      "structure": "put debit or call credit spread",
       "price": 32.54,
       "ma50": 38.54,
       "ma200": 36.28,
-      "iv_rank": 100,
-      "expected_move": 2.56,
+      "iv_rank": null,
+      "expected_move": null,
       "flow": "distribution",
       "max_loss": 100.0,
       "position_note": "",
@@ -1599,7 +1599,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Information Technology",
-      "timestamp": "2026-07-07T15:25:32.020824"
+      "timestamp": "2026-07-08T14:56:17.931304"
     },
     {
       "symbol": "LLY",
@@ -1626,7 +1626,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Health Care",
-      "timestamp": "2026-07-07T15:25:32.860366"
+      "timestamp": "2026-07-08T14:56:18.679990"
     },
     {
       "symbol": "ABBV",
@@ -1652,7 +1652,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Health Care",
-      "timestamp": "2026-07-07T15:25:34.303613"
+      "timestamp": "2026-07-08T14:56:20.144904"
     },
     {
       "symbol": "TMO",
@@ -1664,8 +1664,8 @@
       "price": 462.6,
       "ma50": 494.48,
       "ma200": 526.94,
-      "iv_rank": 100,
-      "expected_move": 30.22,
+      "iv_rank": 69.7,
+      "expected_move": 13.79,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -1678,7 +1678,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Health Care",
-      "timestamp": "2026-07-07T15:25:35.323757"
+      "timestamp": "2026-07-08T14:56:21.417275"
     },
     {
       "symbol": "DHR",
@@ -1690,8 +1690,8 @@
       "price": 174.04,
       "ma50": 192.28,
       "ma200": 208.59,
-      "iv_rank": 87.3,
-      "expected_move": 11.92,
+      "iv_rank": 59.8,
+      "expected_move": 6.27,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -1704,7 +1704,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Health Care",
-      "timestamp": "2026-07-07T15:25:36.897257"
+      "timestamp": "2026-07-08T14:56:23.078251"
     },
     {
       "symbol": "BSX",
@@ -1730,7 +1730,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Health Care",
-      "timestamp": "2026-07-07T15:25:39.113558"
+      "timestamp": "2026-07-08T14:56:25.589524"
     },
     {
       "symbol": "ISRG",
@@ -1742,8 +1742,8 @@
       "price": 452.35,
       "ma50": 473.95,
       "ma200": 499.84,
-      "iv_rank": 74.4,
-      "expected_move": 16.7,
+      "iv_rank": 100,
+      "expected_move": 16.45,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -1756,7 +1756,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Health Care",
-      "timestamp": "2026-07-07T15:25:39.974215"
+      "timestamp": "2026-07-08T14:56:26.455440"
     },
     {
       "symbol": "ELV",
@@ -1768,8 +1768,8 @@
       "price": 371.9,
       "ma50": 312.74,
       "ma200": 325.29,
-      "iv_rank": 70.2,
-      "expected_move": 23.89,
+      "iv_rank": 100,
+      "expected_move": 37.83,
       "flow": "accumulation",
       "max_loss": 100.0,
       "position_note": "",
@@ -1784,34 +1784,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Health Care",
-      "timestamp": "2026-07-07T15:25:43.852583"
-    },
-    {
-      "symbol": "EW",
-      "verdict": "WATCH",
-      "direction": "bullish",
-      "conviction": "med",
-      "regime": "high-iv",
-      "structure": "cash-secured put / put credit spread",
-      "price": 83.33,
-      "ma50": 82.2,
-      "ma200": 81.09,
-      "iv_rank": 57.8,
-      "expected_move": 11.08,
-      "flow": "neutral",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "med conviction \u2014 wait for confirmation",
-      "sector": "Health Care",
-      "timestamp": "2026-07-07T15:25:46.737303"
+      "timestamp": "2026-07-08T14:56:31.019211"
     },
     {
       "symbol": "HOLX",
@@ -1823,8 +1796,8 @@
       "price": 76.01,
       "ma50": 75.29,
       "ma200": 71.28,
-      "iv_rank": 1.3,
-      "expected_move": 2.45,
+      "iv_rank": 1.4,
+      "expected_move": 2.44,
       "flow": "distribution",
       "max_loss": 100.0,
       "position_note": "",
@@ -1839,20 +1812,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Health Care",
-      "timestamp": "2026-07-07T15:25:47.434430"
+      "timestamp": "2026-07-08T14:56:34.993531"
     },
     {
       "symbol": "IQV",
       "verdict": "WATCH",
       "direction": "bearish",
       "conviction": "med",
-      "regime": "high-iv",
-      "structure": "call credit spread",
+      "regime": "mid-iv",
+      "structure": "put debit or call credit spread",
       "price": 160.94,
       "ma50": 168.89,
       "ma200": 196.96,
-      "iv_rank": 100.0,
-      "expected_move": 20.06,
+      "iv_rank": 30.0,
+      "expected_move": 12.1,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -1865,7 +1838,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Health Care",
-      "timestamp": "2026-07-07T15:25:48.871520"
+      "timestamp": "2026-07-08T14:56:36.587910"
     },
     {
       "symbol": "HSIC",
@@ -1877,8 +1850,8 @@
       "price": 72.02,
       "ma50": 76.44,
       "ma200": 72.6,
-      "iv_rank": 100,
-      "expected_move": 14.7,
+      "iv_rank": 70.5,
+      "expected_move": 7.08,
       "flow": "distribution",
       "max_loss": 100.0,
       "position_note": "",
@@ -1893,20 +1866,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Health Care",
-      "timestamp": "2026-07-07T15:25:50.353970"
+      "timestamp": "2026-07-08T14:56:38.058615"
     },
     {
       "symbol": "DXCM",
       "verdict": "WATCH",
       "direction": "bearish",
       "conviction": "med",
-      "regime": "mid-iv",
-      "structure": "put debit or call credit spread",
+      "regime": "low-iv",
+      "structure": "long put / put debit spread",
       "price": 60.04,
       "ma50": 65.59,
       "ma200": 69.37,
-      "iv_rank": 34.8,
-      "expected_move": 3.38,
+      "iv_rank": 0.0,
+      "expected_move": 1.39,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -1919,20 +1892,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Health Care",
-      "timestamp": "2026-07-07T15:25:53.107265"
+      "timestamp": "2026-07-08T14:56:40.999109"
     },
     {
       "symbol": "GEHC",
       "verdict": "WATCH",
       "direction": "bearish",
       "conviction": "med",
-      "regime": "high-iv",
-      "structure": "call credit spread",
+      "regime": "low-iv",
+      "structure": "long put / put debit spread",
       "price": 61,
       "ma50": 72.63,
       "ma200": 76.37,
-      "iv_rank": 53.1,
-      "expected_move": 2.9,
+      "iv_rank": 4.5,
+      "expected_move": 1.17,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -1945,7 +1918,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Health Care",
-      "timestamp": "2026-07-07T15:25:53.809979"
+      "timestamp": "2026-07-08T14:56:41.790069"
     },
     {
       "symbol": "MOH",
@@ -1957,8 +1930,8 @@
       "price": 195.53,
       "ma50": 151.74,
       "ma200": 164.54,
-      "iv_rank": 61.1,
-      "expected_move": 24.25,
+      "iv_rank": 94.6,
+      "expected_move": 30.04,
       "flow": "accumulation",
       "max_loss": 100.0,
       "position_note": "",
@@ -1973,7 +1946,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Health Care",
-      "timestamp": "2026-07-07T15:25:54.841264"
+      "timestamp": "2026-07-08T14:56:42.866900"
     },
     {
       "symbol": "MTD",
@@ -1985,8 +1958,8 @@
       "price": 1260.54,
       "ma50": 1277.9,
       "ma200": 1335.98,
-      "iv_rank": 41.5,
-      "expected_move": 62.96,
+      "iv_rank": 41.1,
+      "expected_move": 59.12,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -1999,7 +1972,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Health Care",
-      "timestamp": "2026-07-07T15:25:55.865622"
+      "timestamp": "2026-07-08T14:56:43.910361"
     },
     {
       "symbol": "RVTY",
@@ -2011,8 +1984,8 @@
       "price": 86.51,
       "ma50": 90.04,
       "ma200": 94.31,
-      "iv_rank": 61.1,
-      "expected_move": 7.63,
+      "iv_rank": 72.2,
+      "expected_move": 7.85,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2025,20 +1998,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Health Care",
-      "timestamp": "2026-07-07T15:25:57.599155"
+      "timestamp": "2026-07-08T14:56:45.947964"
     },
     {
       "symbol": "SOLV",
       "verdict": "WATCH",
       "direction": "bearish",
       "conviction": "med",
-      "regime": "high-iv",
-      "structure": "call credit spread",
+      "regime": "low-iv",
+      "structure": "long put / put debit spread",
       "price": 67.44,
       "ma50": 67.93,
       "ma200": 73.83,
-      "iv_rank": 100.0,
-      "expected_move": 20.15,
+      "iv_rank": 25.6,
+      "expected_move": 4.27,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2051,7 +2024,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Health Care",
-      "timestamp": "2026-07-07T15:25:58.357856"
+      "timestamp": "2026-07-08T14:56:46.680799"
     },
     {
       "symbol": "WAT",
@@ -2063,8 +2036,8 @@
       "price": 301.88,
       "ma50": 309.0,
       "ma200": 334.9,
-      "iv_rank": 59.0,
-      "expected_move": 24.81,
+      "iv_rank": 52.1,
+      "expected_move": 21.72,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2077,20 +2050,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Health Care",
-      "timestamp": "2026-07-07T15:26:00.156285"
+      "timestamp": "2026-07-08T14:56:48.699651"
     },
     {
       "symbol": "BAX",
       "verdict": "WATCH",
       "direction": "bearish",
       "conviction": "med",
-      "regime": "high-iv",
-      "structure": "call credit spread",
+      "regime": "unknown",
+      "structure": "put debit or call credit spread",
       "price": 16.62,
       "ma50": 17.83,
       "ma200": 20.67,
-      "iv_rank": 55.7,
-      "expected_move": 1.28,
+      "iv_rank": null,
+      "expected_move": null,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2103,7 +2076,33 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Health Care",
-      "timestamp": "2026-07-07T15:26:01.192667"
+      "timestamp": "2026-07-08T14:56:49.865152"
+    },
+    {
+      "symbol": "WFC",
+      "verdict": "WATCH",
+      "direction": "bearish",
+      "conviction": "med",
+      "regime": "high-iv",
+      "structure": "call credit spread",
+      "price": 79.18,
+      "ma50": 80.68,
+      "ma200": 84.44,
+      "iv_rank": 100,
+      "expected_move": 4.9,
+      "flow": "neutral",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [],
+      "reasons_against": [
+        "price < 50-day MA",
+        "price < 200-day MA",
+        "death cross",
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "med conviction \u2014 wait for confirmation",
+      "sector": "Financials",
+      "timestamp": "2026-07-08T14:56:52.424499"
     },
     {
       "symbol": "GS",
@@ -2116,7 +2115,7 @@
       "ma50": 870.18,
       "ma200": 832.24,
       "iv_rank": 100,
-      "expected_move": 47.73,
+      "expected_move": 31.2,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2130,20 +2129,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Financials",
-      "timestamp": "2026-07-07T15:26:04.409340"
+      "timestamp": "2026-07-08T14:56:53.198567"
     },
     {
       "symbol": "MS",
       "verdict": "WATCH",
       "direction": "bullish",
       "conviction": "med",
-      "regime": "high-iv",
-      "structure": "cash-secured put / put credit spread",
+      "regime": "unknown",
+      "structure": "call debit or put credit spread",
       "price": 188.01,
       "ma50": 172.32,
       "ma200": 165.98,
-      "iv_rank": 100,
-      "expected_move": 10.68,
+      "iv_rank": null,
+      "expected_move": null,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2157,7 +2156,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Financials",
-      "timestamp": "2026-07-07T15:26:05.226072"
+      "timestamp": "2026-07-08T14:56:53.944839"
     },
     {
       "symbol": "PGR",
@@ -2183,7 +2182,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Financials",
-      "timestamp": "2026-07-07T15:26:11.284681"
+      "timestamp": "2026-07-08T14:57:00.176170"
     },
     {
       "symbol": "TRV",
@@ -2195,8 +2194,8 @@
       "price": 301.53,
       "ma50": 300.95,
       "ma200": 284.25,
-      "iv_rank": 100.0,
-      "expected_move": 23.93,
+      "iv_rank": 84.5,
+      "expected_move": 20.54,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2210,20 +2209,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Financials",
-      "timestamp": "2026-07-07T15:26:11.999589"
+      "timestamp": "2026-07-08T14:57:01.063793"
     },
     {
       "symbol": "AON",
       "verdict": "WATCH",
       "direction": "bearish",
       "conviction": "med",
-      "regime": "high-iv",
-      "structure": "call credit spread",
+      "regime": "mid-iv",
+      "structure": "put debit or call credit spread",
       "price": 314.92,
       "ma50": 324.94,
       "ma200": 344.78,
-      "iv_rank": 100.0,
-      "expected_move": 24.74,
+      "iv_rank": 39.8,
+      "expected_move": 15.36,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2236,7 +2235,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Financials",
-      "timestamp": "2026-07-07T15:26:12.783404"
+      "timestamp": "2026-07-08T14:57:01.897167"
     },
     {
       "symbol": "ALL",
@@ -2248,8 +2247,8 @@
       "price": 219.87,
       "ma50": 210.8,
       "ma200": 205.5,
-      "iv_rank": 21.1,
-      "expected_move": 10.93,
+      "iv_rank": 19.8,
+      "expected_move": 23.42,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2263,7 +2262,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Financials",
-      "timestamp": "2026-07-07T15:26:15.673441"
+      "timestamp": "2026-07-08T14:57:05.309798"
     },
     {
       "symbol": "BK",
@@ -2275,8 +2274,8 @@
       "price": 131.88,
       "ma50": 123.42,
       "ma200": 113.77,
-      "iv_rank": 34.4,
-      "expected_move": 16.56,
+      "iv_rank": 37.4,
+      "expected_move": 16.48,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2290,7 +2289,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Financials",
-      "timestamp": "2026-07-07T15:26:16.478269"
+      "timestamp": "2026-07-08T14:57:06.122465"
     },
     {
       "symbol": "STT",
@@ -2302,8 +2301,8 @@
       "price": 148.08,
       "ma50": 133.65,
       "ma200": 123.11,
-      "iv_rank": 17.4,
-      "expected_move": 8.7,
+      "iv_rank": 17.7,
+      "expected_move": 19.15,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2317,7 +2316,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Financials",
-      "timestamp": "2026-07-07T15:26:17.247526"
+      "timestamp": "2026-07-08T14:57:06.867373"
     },
     {
       "symbol": "USB",
@@ -2330,7 +2329,7 @@
       "ma50": 54.1,
       "ma200": 51.22,
       "iv_rank": 100,
-      "expected_move": 4.77,
+      "expected_move": 3.91,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2344,7 +2343,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Financials",
-      "timestamp": "2026-07-07T15:26:17.967058"
+      "timestamp": "2026-07-08T14:57:07.638447"
     },
     {
       "symbol": "PNC",
@@ -2357,7 +2356,7 @@
       "ma50": 213.84,
       "ma200": 205.08,
       "iv_rank": 100,
-      "expected_move": 14.42,
+      "expected_move": 13.18,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2371,34 +2370,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Financials",
-      "timestamp": "2026-07-07T15:26:18.668960"
-    },
-    {
-      "symbol": "TFC",
-      "verdict": "WATCH",
-      "direction": "bullish",
-      "conviction": "med",
-      "regime": "high-iv",
-      "structure": "cash-secured put / put credit spread",
-      "price": 49.48,
-      "ma50": 48.12,
-      "ma200": 47.27,
-      "iv_rank": 71.5,
-      "expected_move": 2.76,
-      "flow": "neutral",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "med conviction \u2014 wait for confirmation",
-      "sector": "Financials",
-      "timestamp": "2026-07-07T15:26:19.376948"
+      "timestamp": "2026-07-08T14:57:08.582503"
     },
     {
       "symbol": "HBAN",
@@ -2410,8 +2382,8 @@
       "price": 16.16,
       "ma50": 16.21,
       "ma200": 16.79,
-      "iv_rank": 71.1,
-      "expected_move": 0.82,
+      "iv_rank": 100,
+      "expected_move": 1.31,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2424,20 +2396,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Financials",
-      "timestamp": "2026-07-07T15:26:21.496174"
+      "timestamp": "2026-07-08T14:57:11.659396"
     },
     {
       "symbol": "KEY",
       "verdict": "WATCH",
       "direction": "bullish",
       "conviction": "med",
-      "regime": "high-iv",
-      "structure": "cash-secured put / put credit spread",
+      "regime": "low-iv",
+      "structure": "long call / call debit spread",
       "price": 21.66,
       "ma50": 20.71,
       "ma200": 19.66,
-      "iv_rank": 93.2,
-      "expected_move": 2.35,
+      "iv_rank": 18.9,
+      "expected_move": 2.27,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2451,20 +2423,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Financials",
-      "timestamp": "2026-07-07T15:26:22.203109"
+      "timestamp": "2026-07-08T14:57:12.470101"
     },
     {
       "symbol": "MTB",
       "verdict": "WATCH",
       "direction": "bullish",
       "conviction": "med",
-      "regime": "high-iv",
-      "structure": "cash-secured put / put credit spread",
+      "regime": "low-iv",
+      "structure": "long call / call debit spread",
       "price": 214.08,
       "ma50": 212.09,
       "ma200": 202.55,
-      "iv_rank": 96.6,
-      "expected_move": 24.28,
+      "iv_rank": 28.4,
+      "expected_move": 24.67,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2478,7 +2450,34 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Financials",
-      "timestamp": "2026-07-07T15:26:23.723823"
+      "timestamp": "2026-07-08T14:57:14.046359"
+    },
+    {
+      "symbol": "RF",
+      "verdict": "WATCH",
+      "direction": "bullish",
+      "conviction": "med",
+      "regime": "high-iv",
+      "structure": "cash-secured put / put credit spread",
+      "price": 27.66,
+      "ma50": 27.12,
+      "ma200": 26.72,
+      "iv_rank": 98.2,
+      "expected_move": 1.55,
+      "flow": "neutral",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [
+        "price > 50-day MA",
+        "price > 200-day MA",
+        "golden cross"
+      ],
+      "reasons_against": [
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "med conviction \u2014 wait for confirmation",
+      "sector": "Financials",
+      "timestamp": "2026-07-08T14:57:14.787045"
     },
     {
       "symbol": "CBOE",
@@ -2505,34 +2504,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Financials",
-      "timestamp": "2026-07-07T15:26:26.812942"
-    },
-    {
-      "symbol": "NTRS",
-      "verdict": "WATCH",
-      "direction": "bullish",
-      "conviction": "med",
-      "regime": "low-iv",
-      "structure": "long call / call debit spread",
-      "price": 161.24,
-      "ma50": 148.01,
-      "ma200": 137.59,
-      "iv_rank": 6.4,
-      "expected_move": 16.95,
-      "flow": "neutral",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "med conviction \u2014 wait for confirmation",
-      "sector": "Financials",
-      "timestamp": "2026-07-07T15:26:28.953577"
+      "timestamp": "2026-07-08T14:57:17.449470"
     },
     {
       "symbol": "CMA",
@@ -2560,7 +2532,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Financials",
-      "timestamp": "2026-07-07T15:26:32.187111"
+      "timestamp": "2026-07-08T14:57:23.350140"
     },
     {
       "symbol": "AMZN",
@@ -2588,34 +2560,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Consumer Discretionary",
-      "timestamp": "2026-07-07T15:26:33.175916"
-    },
-    {
-      "symbol": "SBUX",
-      "verdict": "WATCH",
-      "direction": "bullish",
-      "conviction": "med",
-      "regime": "mid-iv",
-      "structure": "call debit or put credit spread",
-      "price": 104.97,
-      "ma50": 96.99,
-      "ma200": 90.17,
-      "iv_rank": 41.5,
-      "expected_move": 2.63,
-      "flow": "neutral",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "med conviction \u2014 wait for confirmation",
-      "sector": "Consumer Discretionary",
-      "timestamp": "2026-07-07T15:26:37.187197"
+      "timestamp": "2026-07-08T14:57:24.663193"
     },
     {
       "symbol": "F",
@@ -2628,7 +2573,7 @@
       "ma50": 12.31,
       "ma200": 12.54,
       "iv_rank": 100,
-      "expected_move": 0.72,
+      "expected_move": 0.49,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2641,7 +2586,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Consumer Discretionary",
-      "timestamp": "2026-07-07T15:26:39.916430"
+      "timestamp": "2026-07-08T14:57:33.421158"
     },
     {
       "symbol": "AZO",
@@ -2666,7 +2611,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Consumer Discretionary",
-      "timestamp": "2026-07-07T15:26:40.928528"
+      "timestamp": "2026-07-08T14:57:34.944512"
     },
     {
       "symbol": "BBY",
@@ -2692,20 +2637,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Consumer Discretionary",
-      "timestamp": "2026-07-07T15:26:46.708983"
+      "timestamp": "2026-07-08T14:57:41.706464"
     },
     {
-      "symbol": "GPC",
+      "symbol": "KMX",
       "verdict": "WATCH",
       "direction": "bearish",
       "conviction": "med",
-      "regime": "high-iv",
-      "structure": "call credit spread",
-      "price": 103.52,
-      "ma50": 108.63,
-      "ma200": 127.02,
-      "iv_rank": 68.6,
-      "expected_move": 7.94,
+      "regime": "low-iv",
+      "structure": "long put / put debit spread",
+      "price": 36.88,
+      "ma50": 41.56,
+      "ma200": 45.96,
+      "iv_rank": 0.0,
+      "expected_move": 1.93,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2718,7 +2663,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Consumer Discretionary",
-      "timestamp": "2026-07-07T15:26:48.437162"
+      "timestamp": "2026-07-08T14:57:42.637000"
     },
     {
       "symbol": "MAR",
@@ -2730,8 +2675,8 @@
       "price": 347.24,
       "ma50": 341.87,
       "ma200": 302.03,
-      "iv_rank": 100,
-      "expected_move": 15.53,
+      "iv_rank": 79.6,
+      "expected_move": 8.43,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2745,20 +2690,46 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Consumer Discretionary",
-      "timestamp": "2026-07-07T15:26:50.652225"
+      "timestamp": "2026-07-08T14:57:46.274983"
     },
     {
-      "symbol": "EXPE",
+      "symbol": "CCL",
+      "verdict": "WATCH",
+      "direction": "bearish",
+      "conviction": "med",
+      "regime": "low-iv",
+      "structure": "long put / put debit spread",
+      "price": 25.67,
+      "ma50": 26.91,
+      "ma200": 28.85,
+      "iv_rank": 28.3,
+      "expected_move": 0.75,
+      "flow": "neutral",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [],
+      "reasons_against": [
+        "price < 50-day MA",
+        "price < 200-day MA",
+        "death cross",
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "med conviction \u2014 wait for confirmation",
+      "sector": "Consumer Discretionary",
+      "timestamp": "2026-07-08T14:57:48.171960"
+    },
+    {
+      "symbol": "ABNB",
       "verdict": "WATCH",
       "direction": "bullish",
       "conviction": "med",
       "regime": "high-iv",
       "structure": "cash-secured put / put credit spread",
-      "price": 246.5,
-      "ma50": 236.29,
-      "ma200": 235.86,
-      "iv_rank": 100,
-      "expected_move": 15.8,
+      "price": 138.86,
+      "ma50": 133.1,
+      "ma200": 128.35,
+      "iv_rank": 86.1,
+      "expected_move": 3.15,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2772,20 +2743,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Consumer Discretionary",
-      "timestamp": "2026-07-07T15:26:53.839366"
+      "timestamp": "2026-07-08T14:57:50.503288"
     },
     {
       "symbol": "LYV",
       "verdict": "WATCH",
       "direction": "bullish",
       "conviction": "med",
-      "regime": "unknown",
-      "structure": "call debit or put credit spread",
+      "regime": "high-iv",
+      "structure": "cash-secured put / put credit spread",
       "price": 157.58,
       "ma50": 157.24,
       "ma200": 152.08,
-      "iv_rank": null,
-      "expected_move": null,
+      "iv_rank": 100,
+      "expected_move": 8.71,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2799,20 +2770,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Consumer Discretionary",
-      "timestamp": "2026-07-07T15:26:55.280234"
+      "timestamp": "2026-07-08T14:57:51.228059"
     },
     {
       "symbol": "MAT",
       "verdict": "WATCH",
       "direction": "bearish",
       "conviction": "med",
-      "regime": "mid-iv",
-      "structure": "put debit or call credit spread",
+      "regime": "high-iv",
+      "structure": "call credit spread",
       "price": 14.85,
       "ma50": 15.29,
       "ma200": 18.07,
-      "iv_rank": 42.1,
-      "expected_move": 0.88,
+      "iv_rank": 84.8,
+      "expected_move": 1.07,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2825,20 +2796,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Consumer Discretionary",
-      "timestamp": "2026-07-07T15:26:58.365040"
+      "timestamp": "2026-07-08T14:57:54.834636"
     },
     {
       "symbol": "META",
       "verdict": "WATCH",
       "direction": "bearish",
       "conviction": "med",
-      "regime": "mid-iv",
+      "regime": "unknown",
       "structure": "put debit or call credit spread",
       "price": 610.41,
       "ma50": 629.41,
       "ma200": 677.83,
-      "iv_rank": 43.4,
-      "expected_move": 15.48,
+      "iv_rank": null,
+      "expected_move": null,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2851,20 +2822,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Communication Services",
-      "timestamp": "2026-07-07T15:27:03.801940"
+      "timestamp": "2026-07-08T14:58:00.653447"
     },
     {
       "symbol": "NFLX",
       "verdict": "WATCH",
       "direction": "bearish",
       "conviction": "med",
-      "regime": "high-iv",
-      "structure": "call credit spread",
+      "regime": "unknown",
+      "structure": "put debit or call credit spread",
       "price": 91.02,
       "ma50": 94.93,
       "ma200": 103.98,
-      "iv_rank": 100,
-      "expected_move": 5.15,
+      "iv_rank": null,
+      "expected_move": null,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2877,7 +2848,35 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Communication Services",
-      "timestamp": "2026-07-07T15:27:06.283791"
+      "timestamp": "2026-07-08T14:58:03.271517"
+    },
+    {
+      "symbol": "MTCH",
+      "verdict": "WATCH",
+      "direction": "bullish",
+      "conviction": "med",
+      "regime": "high-iv",
+      "structure": "cash-secured put / put credit spread",
+      "price": 38.17,
+      "ma50": 32.69,
+      "ma200": 33.5,
+      "iv_rank": 60.0,
+      "expected_move": 6.1,
+      "flow": "accumulation",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [
+        "price > 50-day MA",
+        "price > 200-day MA",
+        "flow: accumulation"
+      ],
+      "reasons_against": [
+        "death cross",
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "med conviction \u2014 wait for confirmation",
+      "sector": "Communication Services",
+      "timestamp": "2026-07-08T14:58:08.529581"
     },
     {
       "symbol": "PARA",
@@ -2902,7 +2901,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Communication Services",
-      "timestamp": "2026-07-07T15:27:11.581108"
+      "timestamp": "2026-07-08T14:58:09.291788"
     },
     {
       "symbol": "IPG",
@@ -2928,7 +2927,35 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Communication Services",
-      "timestamp": "2026-07-07T15:27:13.178598"
+      "timestamp": "2026-07-08T14:58:11.160689"
+    },
+    {
+      "symbol": "RTX",
+      "verdict": "WATCH",
+      "direction": "bearish",
+      "conviction": "med",
+      "regime": "high-iv",
+      "structure": "call credit spread",
+      "price": 172.9,
+      "ma50": 195.59,
+      "ma200": 178.84,
+      "iv_rank": 100,
+      "expected_move": 10.87,
+      "flow": "distribution",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [
+        "golden cross"
+      ],
+      "reasons_against": [
+        "price < 50-day MA",
+        "price < 200-day MA",
+        "flow: distribution",
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "med conviction \u2014 wait for confirmation",
+      "sector": "Industrials",
+      "timestamp": "2026-07-08T14:58:16.086426"
     },
     {
       "symbol": "LMT",
@@ -2955,7 +2982,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Industrials",
-      "timestamp": "2026-07-07T15:27:18.619733"
+      "timestamp": "2026-07-08T14:58:17.205410"
     },
     {
       "symbol": "GD",
@@ -2967,8 +2994,8 @@
       "price": 349.08,
       "ma50": 345.49,
       "ma200": 338.91,
-      "iv_rank": 100,
-      "expected_move": 15.55,
+      "iv_rank": 86.3,
+      "expected_move": 9.42,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -2982,7 +3009,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Industrials",
-      "timestamp": "2026-07-07T15:27:20.349534"
+      "timestamp": "2026-07-08T14:58:19.155275"
     },
     {
       "symbol": "MMM",
@@ -2994,8 +3021,8 @@
       "price": 141.56,
       "ma50": 150.39,
       "ma200": 157.87,
-      "iv_rank": 100,
-      "expected_move": 10.36,
+      "iv_rank": 90.6,
+      "expected_move": 8.25,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -3008,34 +3035,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Industrials",
-      "timestamp": "2026-07-07T15:27:21.064377"
-    },
-    {
-      "symbol": "ETN",
-      "verdict": "WATCH",
-      "direction": "bullish",
-      "conviction": "med",
-      "regime": "high-iv",
-      "structure": "cash-secured put / put credit spread",
-      "price": 422.44,
-      "ma50": 380.03,
-      "ma200": 362.9,
-      "iv_rank": 65.9,
-      "expected_move": 22.76,
-      "flow": "neutral",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "med conviction \u2014 wait for confirmation",
-      "sector": "Industrials",
-      "timestamp": "2026-07-07T15:27:22.092250"
+      "timestamp": "2026-07-08T14:58:19.908205"
     },
     {
       "symbol": "ROK",
@@ -3047,8 +3047,8 @@
       "price": 400.31,
       "ma50": 384.51,
       "ma200": 376.24,
-      "iv_rank": 46.9,
-      "expected_move": 32.98,
+      "iv_rank": 34.6,
+      "expected_move": 63.68,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -3062,34 +3062,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Industrials",
-      "timestamp": "2026-07-07T15:27:23.166761"
-    },
-    {
-      "symbol": "AME",
-      "verdict": "WATCH",
-      "direction": "bullish",
-      "conviction": "med",
-      "regime": "mid-iv",
-      "structure": "call debit or put credit spread",
-      "price": 230.43,
-      "ma50": 225.76,
-      "ma200": 204.54,
-      "iv_rank": 48.9,
-      "expected_move": 26.98,
-      "flow": "neutral",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "med conviction \u2014 wait for confirmation",
-      "sector": "Industrials",
-      "timestamp": "2026-07-07T15:27:23.877401"
+      "timestamp": "2026-07-08T14:58:22.386224"
     },
     {
       "symbol": "GWW",
@@ -3102,7 +3075,7 @@
       "ma50": 1118.95,
       "ma200": 1034.39,
       "iv_rank": 100,
-      "expected_move": 80.44,
+      "expected_move": 82.87,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -3116,34 +3089,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Industrials",
-      "timestamp": "2026-07-07T15:27:25.706153"
-    },
-    {
-      "symbol": "UNP",
-      "verdict": "WATCH",
-      "direction": "bullish",
-      "conviction": "med",
-      "regime": "high-iv",
-      "structure": "cash-secured put / put credit spread",
-      "price": 263.41,
-      "ma50": 252.54,
-      "ma200": 235.17,
-      "iv_rank": 95.3,
-      "expected_move": 10.43,
-      "flow": "neutral",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "med conviction \u2014 wait for confirmation",
-      "sector": "Industrials",
-      "timestamp": "2026-07-07T15:27:27.127121"
+      "timestamp": "2026-07-08T14:58:25.112001"
     },
     {
       "symbol": "DAL",
@@ -3171,7 +3117,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Industrials",
-      "timestamp": "2026-07-07T15:27:28.962445"
+      "timestamp": "2026-07-08T14:58:28.519804"
     },
     {
       "symbol": "AAL",
@@ -3199,7 +3145,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Industrials",
-      "timestamp": "2026-07-07T15:27:30.374606"
+      "timestamp": "2026-07-08T14:58:30.110376"
     },
     {
       "symbol": "CTAS",
@@ -3211,8 +3157,8 @@
       "price": 166.89,
       "ma50": 182.83,
       "ma200": 194.12,
-      "iv_rank": 31.8,
-      "expected_move": 6.1,
+      "iv_rank": 39.4,
+      "expected_move": 4.86,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -3225,33 +3171,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Industrials",
-      "timestamp": "2026-07-07T15:27:32.595055"
-    },
-    {
-      "symbol": "PG",
-      "verdict": "WATCH",
-      "direction": "bearish",
-      "conviction": "med",
-      "regime": "high-iv",
-      "structure": "call credit spread",
-      "price": 143.42,
-      "ma50": 149.18,
-      "ma200": 150.62,
-      "iv_rank": 87.7,
-      "expected_move": 6.63,
-      "flow": "neutral",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [],
-      "reasons_against": [
-        "price < 50-day MA",
-        "price < 200-day MA",
-        "death cross",
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "med conviction \u2014 wait for confirmation",
-      "sector": "Consumer Staples",
-      "timestamp": "2026-07-07T15:27:42.206137"
+      "timestamp": "2026-07-08T14:58:32.607954"
     },
     {
       "symbol": "KO",
@@ -3263,8 +3183,8 @@
       "price": 78.19,
       "ma50": 77.13,
       "ma200": 71.99,
-      "iv_rank": 100,
-      "expected_move": 3.53,
+      "iv_rank": 75.6,
+      "expected_move": 3.44,
       "flow": "distribution",
       "max_loss": 100.0,
       "position_note": "",
@@ -3279,7 +3199,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Consumer Staples",
-      "timestamp": "2026-07-07T15:27:42.936807"
+      "timestamp": "2026-07-08T14:58:43.755707"
     },
     {
       "symbol": "MO",
@@ -3291,8 +3211,8 @@
       "price": 73.41,
       "ma50": 67.01,
       "ma200": 63.41,
-      "iv_rank": 23.1,
-      "expected_move": 1.45,
+      "iv_rank": 19.7,
+      "expected_move": 2.78,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -3306,7 +3226,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Consumer Staples",
-      "timestamp": "2026-07-07T15:27:46.245416"
+      "timestamp": "2026-07-08T14:58:47.219516"
     },
     {
       "symbol": "KMB",
@@ -3332,7 +3252,33 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Consumer Staples",
-      "timestamp": "2026-07-07T15:27:47.536562"
+      "timestamp": "2026-07-08T14:58:48.777374"
+    },
+    {
+      "symbol": "GIS",
+      "verdict": "WATCH",
+      "direction": "bearish",
+      "conviction": "med",
+      "regime": "low-iv",
+      "structure": "long put / put debit spread",
+      "price": 34.43,
+      "ma50": 38.31,
+      "ma200": 45.48,
+      "iv_rank": 10.4,
+      "expected_move": 5.05,
+      "flow": "neutral",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [],
+      "reasons_against": [
+        "price < 50-day MA",
+        "price < 200-day MA",
+        "death cross",
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "med conviction \u2014 wait for confirmation",
+      "sector": "Consumer Staples",
+      "timestamp": "2026-07-08T14:58:49.518303"
     },
     {
       "symbol": "K",
@@ -3360,7 +3306,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Consumer Staples",
-      "timestamp": "2026-07-07T15:27:48.962835"
+      "timestamp": "2026-07-08T14:58:50.338709"
     },
     {
       "symbol": "CPB",
@@ -3372,8 +3318,8 @@
       "price": 20.5,
       "ma50": 22.31,
       "ma200": 28.33,
-      "iv_rank": 58.7,
-      "expected_move": 1.49,
+      "iv_rank": 57.3,
+      "expected_move": 1.03,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -3386,7 +3332,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Consumer Staples",
-      "timestamp": "2026-07-07T15:27:49.725082"
+      "timestamp": "2026-07-08T14:58:51.094977"
     },
     {
       "symbol": "SJM",
@@ -3398,8 +3344,8 @@
       "price": 96.91,
       "ma50": 100.5,
       "ma200": 104.4,
-      "iv_rank": 9.3,
-      "expected_move": 5.18,
+      "iv_rank": 11.6,
+      "expected_move": 5.1,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -3412,20 +3358,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Consumer Staples",
-      "timestamp": "2026-07-07T15:27:51.212792"
+      "timestamp": "2026-07-08T14:58:52.724805"
     },
     {
       "symbol": "HRL",
       "verdict": "WATCH",
       "direction": "bearish",
       "conviction": "med",
-      "regime": "unknown",
-      "structure": "put debit or call credit spread",
+      "regime": "high-iv",
+      "structure": "call credit spread",
       "price": 20.66,
       "ma50": 22.54,
       "ma200": 24.24,
-      "iv_rank": null,
-      "expected_move": null,
+      "iv_rank": 57.2,
+      "expected_move": 0.79,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -3438,20 +3384,46 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Consumer Staples",
-      "timestamp": "2026-07-07T15:27:51.921771"
+      "timestamp": "2026-07-08T14:58:53.479633"
+    },
+    {
+      "symbol": "MKC",
+      "verdict": "WATCH",
+      "direction": "bearish",
+      "conviction": "med",
+      "regime": "low-iv",
+      "structure": "long put / put debit spread",
+      "price": 48.02,
+      "ma50": 56.28,
+      "ma200": 64.63,
+      "iv_rank": 13.3,
+      "expected_move": 6.15,
+      "flow": "neutral",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [],
+      "reasons_against": [
+        "price < 50-day MA",
+        "price < 200-day MA",
+        "death cross",
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "med conviction \u2014 wait for confirmation",
+      "sector": "Consumer Staples",
+      "timestamp": "2026-07-08T14:58:54.220748"
     },
     {
       "symbol": "KR",
       "verdict": "WATCH",
       "direction": "bullish",
       "conviction": "med",
-      "regime": "unknown",
-      "structure": "call debit or put credit spread",
+      "regime": "high-iv",
+      "structure": "cash-secured put / put credit spread",
       "price": 67.55,
       "ma50": 70.32,
       "ma200": 67.48,
-      "iv_rank": null,
-      "expected_move": null,
+      "iv_rank": 100,
+      "expected_move": 4.45,
       "flow": "accumulation",
       "max_loss": 100.0,
       "position_note": "",
@@ -3466,7 +3438,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Consumer Staples",
-      "timestamp": "2026-07-07T15:27:55.461225"
+      "timestamp": "2026-07-08T14:58:57.211949"
     },
     {
       "symbol": "PPC",
@@ -3478,8 +3450,8 @@
       "price": 30.59,
       "ma50": 36.5,
       "ma200": 40.35,
-      "iv_rank": 85.0,
-      "expected_move": 57.19,
+      "iv_rank": 95.4,
+      "expected_move": 60.24,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -3492,7 +3464,33 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Consumer Staples",
-      "timestamp": "2026-07-07T15:27:56.915124"
+      "timestamp": "2026-07-08T14:58:58.924243"
+    },
+    {
+      "symbol": "CALM",
+      "verdict": "WATCH",
+      "direction": "bearish",
+      "conviction": "med",
+      "regime": "mid-iv",
+      "structure": "put debit or call credit spread",
+      "price": 74.75,
+      "ma50": 80.81,
+      "ma200": 90.02,
+      "iv_rank": 49.5,
+      "expected_move": 4.01,
+      "flow": "neutral",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [],
+      "reasons_against": [
+        "price < 50-day MA",
+        "price < 200-day MA",
+        "death cross",
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "med conviction \u2014 wait for confirmation",
+      "sector": "Consumer Staples",
+      "timestamp": "2026-07-08T14:58:59.678336"
     },
     {
       "symbol": "THS",
@@ -3505,7 +3503,7 @@
       "ma50": 24.02,
       "ma200": 21.27,
       "iv_rank": 100.0,
-      "expected_move": 5.65,
+      "expected_move": 5.64,
       "flow": "distribution",
       "max_loss": 100.0,
       "position_note": "",
@@ -3520,7 +3518,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Consumer Staples",
-      "timestamp": "2026-07-07T15:27:58.652612"
+      "timestamp": "2026-07-08T14:59:00.949989"
     },
     {
       "symbol": "XOM",
@@ -3533,7 +3531,7 @@
       "ma50": 154.95,
       "ma200": 128.04,
       "iv_rank": 100,
-      "expected_move": 5.82,
+      "expected_move": 5.8,
       "flow": "accumulation",
       "max_loss": 100.0,
       "position_note": "",
@@ -3548,7 +3546,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Energy",
-      "timestamp": "2026-07-07T15:27:59.971014"
+      "timestamp": "2026-07-08T14:59:02.515620"
     },
     {
       "symbol": "CVX",
@@ -3561,7 +3559,7 @@
       "ma50": 193.11,
       "ma200": 166.74,
       "iv_rank": 100,
-      "expected_move": 7.15,
+      "expected_move": 5.06,
       "flow": "accumulation",
       "max_loss": 100.0,
       "position_note": "",
@@ -3576,20 +3574,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Energy",
-      "timestamp": "2026-07-07T15:28:00.726339"
+      "timestamp": "2026-07-08T14:59:03.377759"
     },
     {
       "symbol": "COP",
       "verdict": "WATCH",
       "direction": "bullish",
       "conviction": "med",
-      "regime": "unknown",
-      "structure": "call debit or put credit spread",
+      "regime": "high-iv",
+      "structure": "cash-secured put / put credit spread",
       "price": 124.91,
       "ma50": 122.31,
       "ma200": 101.57,
-      "iv_rank": null,
-      "expected_move": null,
+      "iv_rank": 100,
+      "expected_move": 4.17,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -3603,7 +3601,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Energy",
-      "timestamp": "2026-07-07T15:28:01.877975"
+      "timestamp": "2026-07-08T14:59:04.185097"
     },
     {
       "symbol": "SLB",
@@ -3630,47 +3628,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Energy",
-      "timestamp": "2026-07-07T15:28:03.350420"
-    },
-    {
-      "symbol": "PSX",
-      "verdict": "WATCH",
-      "direction": "bullish",
-      "conviction": "med",
-      "regime": "mid-iv",
-      "structure": "call debit or put credit spread",
-      "price": 178.47,
-      "ma50": 168.16,
-      "ma200": 143.32,
-      "iv_rank": 47.1,
-      "expected_move": 5.45,
-      "flow": "neutral",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "med conviction \u2014 wait for confirmation",
-      "sector": "Energy",
-      "timestamp": "2026-07-07T15:28:05.571043"
+      "timestamp": "2026-07-08T14:59:05.939764"
     },
     {
       "symbol": "BKR",
       "verdict": "WATCH",
       "direction": "bullish",
       "conviction": "med",
-      "regime": "mid-iv",
-      "structure": "call debit or put credit spread",
+      "regime": "high-iv",
+      "structure": "cash-secured put / put credit spread",
       "price": 69.01,
       "ma50": 62.23,
       "ma200": 51.88,
-      "iv_rank": 31.3,
-      "expected_move": 4.17,
+      "iv_rank": 100.0,
+      "expected_move": 10.48,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -3684,20 +3655,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Energy",
-      "timestamp": "2026-07-07T15:28:10.234522"
+      "timestamp": "2026-07-08T14:59:13.218762"
     },
     {
-      "symbol": "ET",
+      "symbol": "RRC",
       "verdict": "WATCH",
       "direction": "bullish",
       "conviction": "med",
       "regime": "low-iv",
       "structure": "long call / call debit spread",
-      "price": 20.08,
-      "ma50": 19.03,
-      "ma200": 17.67,
-      "iv_rank": 23.0,
-      "expected_move": 0.66,
+      "price": 43,
+      "ma50": 42.78,
+      "ma200": 37.84,
+      "iv_rank": 4.1,
+      "expected_move": 2.23,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -3711,7 +3682,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Energy",
-      "timestamp": "2026-07-07T15:28:15.709635"
+      "timestamp": "2026-07-08T14:59:15.695999"
     },
     {
       "symbol": "NEE",
@@ -3724,7 +3695,7 @@
       "ma50": 92.86,
       "ma200": 83.32,
       "iv_rank": 100,
-      "expected_move": 5.98,
+      "expected_move": 4.95,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -3738,34 +3709,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Utilities",
-      "timestamp": "2026-07-07T15:28:25.871802"
-    },
-    {
-      "symbol": "SO",
-      "verdict": "WATCH",
-      "direction": "bullish",
-      "conviction": "med",
-      "regime": "low-iv",
-      "structure": "long call / call debit spread",
-      "price": 95.99,
-      "ma50": 95.89,
-      "ma200": 92.72,
-      "iv_rank": 14.4,
-      "expected_move": 1.96,
-      "flow": "neutral",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "med conviction \u2014 wait for confirmation",
-      "sector": "Utilities",
-      "timestamp": "2026-07-07T15:28:26.911050"
+      "timestamp": "2026-07-08T14:59:30.019001"
     },
     {
       "symbol": "D",
@@ -3777,8 +3721,8 @@
       "price": 62.95,
       "ma50": 62.51,
       "ma200": 60.93,
-      "iv_rank": 23.3,
-      "expected_move": 5.17,
+      "iv_rank": 29.8,
+      "expected_move": 5.54,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -3792,20 +3736,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Utilities",
-      "timestamp": "2026-07-07T15:28:27.660125"
+      "timestamp": "2026-07-08T14:59:31.913309"
     },
     {
-      "symbol": "WEC",
+      "symbol": "AEP",
       "verdict": "WATCH",
       "direction": "bullish",
       "conviction": "med",
       "regime": "mid-iv",
       "structure": "call debit or put credit spread",
-      "price": 116.44,
-      "ma50": 115.69,
-      "ma200": 111.44,
-      "iv_rank": 49.8,
-      "expected_move": 7.79,
+      "price": 134.66,
+      "ma50": 132.73,
+      "ma200": 120.14,
+      "iv_rank": 33.8,
+      "expected_move": 10.71,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -3819,20 +3763,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Utilities",
-      "timestamp": "2026-07-07T15:28:31.132496"
+      "timestamp": "2026-07-08T14:59:32.675204"
     },
     {
-      "symbol": "PLD",
+      "symbol": "XEL",
       "verdict": "WATCH",
       "direction": "bullish",
       "conviction": "med",
-      "regime": "high-iv",
-      "structure": "cash-secured put / put credit spread",
-      "price": 138.76,
-      "ma50": 136.85,
-      "ma200": 125.36,
-      "iv_rank": 53.6,
-      "expected_move": 12.58,
+      "regime": "low-iv",
+      "structure": "long call / call debit spread",
+      "price": 81.17,
+      "ma50": 80.73,
+      "ma200": 77.45,
+      "iv_rank": 25.8,
+      "expected_move": 2.93,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -3845,21 +3789,48 @@
         "OI not reported by provider (free tier) \u2014 verify manually"
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
-      "sector": "Real Estate",
-      "timestamp": "2026-07-07T15:28:39.522594"
+      "sector": "Utilities",
+      "timestamp": "2026-07-08T14:59:34.098698"
+    },
+    {
+      "symbol": "NI",
+      "verdict": "WATCH",
+      "direction": "bullish",
+      "conviction": "med",
+      "regime": "low-iv",
+      "structure": "long call / call debit spread",
+      "price": 48.08,
+      "ma50": 47.1,
+      "ma200": 43.77,
+      "iv_rank": 2.1,
+      "expected_move": 5.54,
+      "flow": "neutral",
+      "max_loss": 100.0,
+      "position_note": "",
+      "reasons_for": [
+        "price > 50-day MA",
+        "price > 200-day MA",
+        "golden cross"
+      ],
+      "reasons_against": [
+        "OI not reported by provider (free tier) \u2014 verify manually"
+      ],
+      "deciding_reason": "med conviction \u2014 wait for confirmation",
+      "sector": "Utilities",
+      "timestamp": "2026-07-08T14:59:39.182185"
     },
     {
       "symbol": "PSA",
       "verdict": "WATCH",
       "direction": "bullish",
       "conviction": "med",
-      "regime": "mid-iv",
-      "structure": "call debit or put credit spread",
+      "regime": "low-iv",
+      "structure": "long call / call debit spread",
       "price": 295.36,
       "ma50": 293.81,
       "ma200": 285.66,
-      "iv_rank": 38.3,
-      "expected_move": 17.92,
+      "iv_rank": 12.1,
+      "expected_move": 29.45,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -3873,7 +3844,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Real Estate",
-      "timestamp": "2026-07-07T15:28:41.237699"
+      "timestamp": "2026-07-08T14:59:46.857671"
     },
     {
       "symbol": "O",
@@ -3885,8 +3856,8 @@
       "price": 63.45,
       "ma50": 63.73,
       "ma200": 60.12,
-      "iv_rank": 85.7,
-      "expected_move": 2.14,
+      "iv_rank": 79.2,
+      "expected_move": 1.92,
       "flow": "accumulation",
       "max_loss": 100.0,
       "position_note": "",
@@ -3901,7 +3872,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Real Estate",
-      "timestamp": "2026-07-07T15:28:41.946163"
+      "timestamp": "2026-07-08T14:59:47.624171"
     },
     {
       "symbol": "VICI",
@@ -3913,8 +3884,8 @@
       "price": 28.09,
       "ma50": 28.51,
       "ma200": 30.05,
-      "iv_rank": 15.7,
-      "expected_move": 1.89,
+      "iv_rank": 12.2,
+      "expected_move": 1.79,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -3927,7 +3898,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Real Estate",
-      "timestamp": "2026-07-07T15:28:50.731733"
+      "timestamp": "2026-07-08T14:59:57.305176"
     },
     {
       "symbol": "SBAC",
@@ -3939,8 +3910,8 @@
       "price": 217.91,
       "ma50": 199.28,
       "ma200": 198.97,
-      "iv_rank": 20.0,
-      "expected_move": 13.14,
+      "iv_rank": 19.3,
+      "expected_move": 28.37,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -3954,60 +3925,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Real Estate",
-      "timestamp": "2026-07-07T15:28:52.207556"
-    },
-    {
-      "symbol": "APD",
-      "verdict": "WATCH",
-      "direction": "bullish",
-      "conviction": "med",
-      "regime": "high-iv",
-      "structure": "cash-secured put / put credit spread",
-      "price": 298.35,
-      "ma50": 289.2,
-      "ma200": 274.61,
-      "iv_rank": 53.3,
-      "expected_move": 33.23,
-      "flow": "neutral",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "med conviction \u2014 wait for confirmation",
-      "sector": "Materials",
-      "timestamp": "2026-07-07T15:28:58.531379"
-    },
-    {
-      "symbol": "SHW",
-      "verdict": "WATCH",
-      "direction": "bearish",
-      "conviction": "med",
-      "regime": "high-iv",
-      "structure": "call credit spread",
-      "price": 310.49,
-      "ma50": 330.33,
-      "ma200": 341.9,
-      "iv_rank": 100.0,
-      "expected_move": 27.09,
-      "flow": "neutral",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [],
-      "reasons_against": [
-        "price < 50-day MA",
-        "price < 200-day MA",
-        "death cross",
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "med conviction \u2014 wait for confirmation",
-      "sector": "Materials",
-      "timestamp": "2026-07-07T15:28:59.267784"
+      "timestamp": "2026-07-08T14:59:58.951067"
     },
     {
       "symbol": "ALB",
@@ -4034,7 +3952,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Materials",
-      "timestamp": "2026-07-07T15:29:06.444486"
+      "timestamp": "2026-07-08T15:00:19.798174"
     },
     {
       "symbol": "HUN",
@@ -4046,8 +3964,8 @@
       "price": 14.22,
       "ma50": 12.83,
       "ma200": 10.88,
-      "iv_rank": 98.8,
-      "expected_move": 2.56,
+      "iv_rank": 100.0,
+      "expected_move": 2.53,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -4061,20 +3979,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Materials",
-      "timestamp": "2026-07-07T15:29:07.997834"
+      "timestamp": "2026-07-08T15:00:21.901648"
     },
     {
       "symbol": "OLN",
       "verdict": "WATCH",
       "direction": "bullish",
       "conviction": "med",
-      "regime": "high-iv",
-      "structure": "cash-secured put / put credit spread",
+      "regime": "low-iv",
+      "structure": "long call / call debit spread",
       "price": 28.69,
       "ma50": 26.63,
       "ma200": 23.38,
-      "iv_rank": 65.2,
-      "expected_move": 3.29,
+      "iv_rank": 29.4,
+      "expected_move": 2.38,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -4088,33 +4006,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Materials",
-      "timestamp": "2026-07-07T15:29:08.739727"
-    },
-    {
-      "symbol": "RPM",
-      "verdict": "WATCH",
-      "direction": "bearish",
-      "conviction": "med",
-      "regime": "high-iv",
-      "structure": "call credit spread",
-      "price": 98.22,
-      "ma50": 103.94,
-      "ma200": 111.28,
-      "iv_rank": 85.1,
-      "expected_move": 6.88,
-      "flow": "neutral",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [],
-      "reasons_against": [
-        "price < 50-day MA",
-        "price < 200-day MA",
-        "death cross",
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "med conviction \u2014 wait for confirmation",
-      "sector": "Materials",
-      "timestamp": "2026-07-07T15:29:09.480904"
+      "timestamp": "2026-07-08T15:00:22.807739"
     },
     {
       "symbol": "PPG",
@@ -4127,7 +4019,7 @@
       "ma50": 109.06,
       "ma200": 107.78,
       "iv_rank": 100,
-      "expected_move": 10.83,
+      "expected_move": 6.23,
       "flow": "distribution",
       "max_loss": 100.0,
       "position_note": "",
@@ -4142,20 +4034,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Materials",
-      "timestamp": "2026-07-07T15:29:10.183659"
+      "timestamp": "2026-07-08T15:00:24.889894"
     },
     {
       "symbol": "SEE",
       "verdict": "WATCH",
       "direction": "bullish",
       "conviction": "med",
-      "regime": "high-iv",
-      "structure": "cash-secured put / put credit spread",
+      "regime": "unknown",
+      "structure": "call debit or put credit spread",
       "price": 42.15,
       "ma50": 41.93,
       "ma200": 37.34,
-      "iv_rank": 100.0,
-      "expected_move": 2.28,
+      "iv_rank": null,
+      "expected_move": null,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -4169,47 +4061,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Materials",
-      "timestamp": "2026-07-07T15:29:11.602534"
-    },
-    {
-      "symbol": "PKG",
-      "verdict": "WATCH",
-      "direction": "bullish",
-      "conviction": "med",
-      "regime": "mid-iv",
-      "structure": "call debit or put credit spread",
-      "price": 218.06,
-      "ma50": 215.49,
-      "ma200": 211.18,
-      "iv_rank": 43.1,
-      "expected_move": 28.1,
-      "flow": "neutral",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "price > 50-day MA",
-        "price > 200-day MA",
-        "golden cross"
-      ],
-      "reasons_against": [
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "med conviction \u2014 wait for confirmation",
-      "sector": "Materials",
-      "timestamp": "2026-07-07T15:29:12.310070"
+      "timestamp": "2026-07-08T15:00:27.135102"
     },
     {
       "symbol": "IP",
       "verdict": "WATCH",
       "direction": "bearish",
       "conviction": "med",
-      "regime": "high-iv",
-      "structure": "call credit spread",
+      "regime": "mid-iv",
+      "structure": "put debit or call credit spread",
       "price": 31.2,
       "ma50": 36.88,
       "ma200": 42.39,
-      "iv_rank": 50.8,
-      "expected_move": 2.73,
+      "iv_rank": 39.7,
+      "expected_move": 1.64,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -4222,48 +4087,20 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Materials",
-      "timestamp": "2026-07-07T15:29:13.044450"
-    },
-    {
-      "symbol": "CCK",
-      "verdict": "WATCH",
-      "direction": "bearish",
-      "conviction": "med",
-      "regime": "high-iv",
-      "structure": "call credit spread",
-      "price": 99.05,
-      "ma50": 104.95,
-      "ma200": 101.33,
-      "iv_rank": 53.6,
-      "expected_move": 5.72,
-      "flow": "distribution",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [
-        "golden cross"
-      ],
-      "reasons_against": [
-        "price < 50-day MA",
-        "price < 200-day MA",
-        "flow: distribution",
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "med conviction \u2014 wait for confirmation",
-      "sector": "Materials",
-      "timestamp": "2026-07-07T15:29:14.656687"
+      "timestamp": "2026-07-08T15:00:29.411855"
     },
     {
       "symbol": "ATI",
       "verdict": "WATCH",
       "direction": "bullish",
       "conviction": "med",
-      "regime": "high-iv",
-      "structure": "cash-secured put / put credit spread",
+      "regime": "mid-iv",
+      "structure": "call debit or put credit spread",
       "price": 153.89,
       "ma50": 153.6,
       "ma200": 112.17,
-      "iv_rank": 59.4,
-      "expected_move": 19.13,
+      "iv_rank": 33.7,
+      "expected_move": 14.71,
       "flow": "neutral",
       "max_loss": 100.0,
       "position_note": "",
@@ -4277,33 +4114,7 @@
       ],
       "deciding_reason": "med conviction \u2014 wait for confirmation",
       "sector": "Materials",
-      "timestamp": "2026-07-07T15:29:16.006547"
-    },
-    {
-      "symbol": "SLGN",
-      "verdict": "WATCH",
-      "direction": "bearish",
-      "conviction": "med",
-      "regime": "low-iv",
-      "structure": "long put / put debit spread",
-      "price": 39.3,
-      "ma50": 41.69,
-      "ma200": 43.14,
-      "iv_rank": 16.5,
-      "expected_move": 8.89,
-      "flow": "neutral",
-      "max_loss": 100.0,
-      "position_note": "",
-      "reasons_for": [],
-      "reasons_against": [
-        "price < 50-day MA",
-        "price < 200-day MA",
-        "death cross",
-        "OI not reported by provider (free tier) \u2014 verify manually"
-      ],
-      "deciding_reason": "med conviction \u2014 wait for confirmation",
-      "sector": "Materials",
-      "timestamp": "2026-07-07T15:29:18.708956"
+      "timestamp": "2026-07-08T15:00:33.170761"
     }
   ],
   "sector_summaries": {
@@ -4328,26 +4139,26 @@
     "Financials": {
       "sector": "Financials",
       "total": 48,
-      "trade_count": 1,
+      "trade_count": 0,
       "watch_count": 18,
-      "pass_count": 28,
+      "pass_count": 29,
       "sector_bias": "bullish",
       "bullish_pct": 48.0
     },
     "Consumer Discretionary": {
       "sector": "Consumer Discretionary",
       "total": 48,
-      "trade_count": 5,
+      "trade_count": 3,
       "watch_count": 11,
-      "pass_count": 32,
+      "pass_count": 34,
       "sector_bias": "bearish",
       "bullish_pct": 25.0
     },
     "Communication Services": {
       "sector": "Communication Services",
       "total": 24,
-      "trade_count": 3,
-      "watch_count": 5,
+      "trade_count": 0,
+      "watch_count": 8,
       "pass_count": 15,
       "sector_bias": "bearish",
       "bullish_pct": 17.0
@@ -4355,8 +4166,8 @@
     "Industrials": {
       "sector": "Industrials",
       "total": 45,
-      "trade_count": 0,
-      "watch_count": 12,
+      "trade_count": 2,
+      "watch_count": 10,
       "pass_count": 33,
       "sector_bias": "bullish",
       "bullish_pct": 38.0
@@ -4364,17 +4175,17 @@
     "Consumer Staples": {
       "sector": "Consumer Staples",
       "total": 29,
-      "trade_count": 1,
-      "watch_count": 11,
-      "pass_count": 17,
+      "trade_count": 3,
+      "watch_count": 13,
+      "pass_count": 13,
       "sector_bias": "mixed",
       "bullish_pct": 31.0
     },
     "Energy": {
       "sector": "Energy",
       "total": 34,
-      "trade_count": 6,
-      "watch_count": 10,
+      "trade_count": 7,
+      "watch_count": 9,
       "pass_count": 13,
       "sector_bias": "bullish",
       "bullish_pct": 71.0
@@ -4383,26 +4194,26 @@
       "sector": "Utilities",
       "total": 27,
       "trade_count": 0,
-      "watch_count": 4,
-      "pass_count": 23,
+      "watch_count": 5,
+      "pass_count": 22,
       "sector_bias": "bullish",
       "bullish_pct": 44.0
     },
     "Real Estate": {
       "sector": "Real Estate",
       "total": 35,
-      "trade_count": 6,
-      "watch_count": 5,
-      "pass_count": 24,
+      "trade_count": 3,
+      "watch_count": 6,
+      "pass_count": 26,
       "sector_bias": "bullish",
       "bullish_pct": 49.0
     },
     "Materials": {
       "sector": "Materials",
       "total": 35,
-      "trade_count": 3,
-      "watch_count": 13,
-      "pass_count": 18,
+      "trade_count": 2,
+      "watch_count": 7,
+      "pass_count": 25,
       "sector_bias": "mixed",
       "bullish_pct": 37.0
     }
@@ -4419,29 +4230,29 @@
       "latest_iv": 0.4693
     },
     "EW": {
-      "points": 12,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.383
+      "points": 13,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3877
     },
     "ELV": {
-      "points": 16,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.4091
+      "points": 17,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.6871
     },
     "PODD": {
-      "points": 27,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.5434
+      "points": 28,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.5271
     },
     "RMD": {
-      "points": 34,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3341
+      "points": 35,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3105
     },
     "SYK": {
-      "points": 34,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.5654
+      "points": 35,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.6055
     },
     "VEEV": {
       "points": 1,
@@ -4449,14 +4260,14 @@
       "latest_iv": 0.5848
     },
     "VTR": {
-      "points": 18,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.2811
+      "points": 19,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4879
     },
     "WELL": {
-      "points": 23,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.2983
+      "points": 24,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3097
     },
     "WST": {
       "points": 7,
@@ -4464,9 +4275,9 @@
       "latest_iv": 0.3477
     },
     "ZBH": {
-      "points": 28,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3387
+      "points": 29,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3024
     },
     "LNT": {
       "points": 1,
@@ -4479,9 +4290,9 @@
       "latest_iv": 0.1692
     },
     "AEP": {
-      "points": 34,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.2287
+      "points": 35,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.2317
     },
     "AWK": {
       "points": 1,
@@ -4494,9 +4305,9 @@
       "latest_iv": 0.2595
     },
     "CNP": {
-      "points": 27,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.1638
+      "points": 28,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.1831
     },
     "CMS": {
       "points": 27,
@@ -4524,9 +4335,9 @@
       "latest_iv": 0.2831
     },
     "ETR": {
-      "points": 34,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.2421
+      "points": 35,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.2555
     },
     "EVRG": {
       "points": 22,
@@ -4544,14 +4355,14 @@
       "latest_iv": 0.212
     },
     "NEE": {
-      "points": 18,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.8453
+      "points": 19,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.99
     },
     "NI": {
-      "points": 34,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.2075
+      "points": 35,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.19
     },
     "PCG": {
       "points": 17,
@@ -4559,9 +4370,9 @@
       "latest_iv": 0.4163
     },
     "PNW": {
-      "points": 34,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.1642
+      "points": 35,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.1778
     },
     "PPL": {
       "points": 27,
@@ -4574,19 +4385,19 @@
       "latest_iv": 0.2367
     },
     "SO": {
-      "points": 20,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.276
+      "points": 21,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.2884
     },
     "WEC": {
-      "points": 25,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.1926
+      "points": 26,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.1528
     },
     "XEL": {
-      "points": 14,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.2658
+      "points": 15,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.2441
     },
     "CSGP": {
       "points": 1,
@@ -4594,29 +4405,29 @@
       "latest_iv": 0.4844
     },
     "AVY": {
-      "points": 30,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3201
+      "points": 31,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.2701
     },
     "IP": {
-      "points": 32,
-      "latest_date": "2026-07-07",
-      "latest_iv": 1.1841
+      "points": 33,
+      "latest_date": "2026-07-08",
+      "latest_iv": 1.0029
     },
     "KLAC": {
-      "points": 16,
-      "latest_date": "2026-07-07",
-      "latest_iv": 1.1465
+      "points": 17,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.8191
     },
     "KEYS": {
-      "points": 33,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.5637
+      "points": 34,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.5787
     },
     "IT": {
-      "points": 30,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.6829
+      "points": 31,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.5861
     },
     "CDW": {
       "points": 16,
@@ -4624,19 +4435,19 @@
       "latest_iv": 0.4987
     },
     "SWKS": {
-      "points": 20,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.7081
+      "points": 21,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.7451
     },
     "FFIV": {
-      "points": 11,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.8109
+      "points": 12,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.5756
     },
     "GEN": {
-      "points": 30,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.7612
+      "points": 31,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4914
     },
     "ZBRA": {
       "points": 23,
@@ -4654,24 +4465,24 @@
       "latest_iv": 0.4951
     },
     "HOLX": {
-      "points": 34,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.0727
+      "points": 35,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.0728
     },
     "TFX": {
-      "points": 19,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.475
+      "points": 20,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.5343
     },
     "MOH": {
-      "points": 26,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.7897
+      "points": 27,
+      "latest_date": "2026-07-08",
+      "latest_iv": 1.0379
     },
     "MCO": {
-      "points": 22,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.379
+      "points": 23,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3844
     },
     "CB": {
       "points": 27,
@@ -4679,19 +4490,19 @@
       "latest_iv": 0.2952
     },
     "TRV": {
-      "points": 20,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.5053
+      "points": 21,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4602
     },
     "AON": {
-      "points": 27,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.5002
+      "points": 28,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3294
     },
     "MMC": {
-      "points": 34,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3136
+      "points": 35,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3144
     },
     "MET": {
       "points": 22,
@@ -4704,14 +4515,14 @@
       "latest_iv": 0.4191
     },
     "BK": {
-      "points": 33,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.7997
+      "points": 34,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.844
     },
     "TFC": {
-      "points": 20,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3557
+      "points": 21,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.241
     },
     "SYF": {
       "points": 16,
@@ -4729,14 +4540,14 @@
       "latest_iv": 0.26
     },
     "TROW": {
-      "points": 19,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.2778
+      "points": 20,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3794
     },
     "WBS": {
-      "points": 30,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.2295
+      "points": 31,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.1605
     },
     "AIG": {
       "points": 26,
@@ -4744,9 +4555,9 @@
       "latest_iv": 0.2675
     },
     "F": {
-      "points": 18,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.8495
+      "points": 19,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.8165
     },
     "ORLY": {
       "points": 22,
@@ -4754,9 +4565,9 @@
       "latest_iv": 0.2899
     },
     "KMX": {
-      "points": 33,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.5328
+      "points": 34,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3532
     },
     "AN": {
       "points": 19,
@@ -4764,39 +4575,39 @@
       "latest_iv": 0.3622
     },
     "GPC": {
-      "points": 31,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.4883
+      "points": 32,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4162
     },
     "DPZ": {
-      "points": 32,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.328
+      "points": 33,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4984
     },
     "POOL": {
-      "points": 23,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.4142
+      "points": 24,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.436
     },
     "MAT": {
-      "points": 34,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3779
+      "points": 35,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4878
     },
     "PVH": {
-      "points": 20,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.499
+      "points": 21,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4638
     },
     "CZR": {
-      "points": 13,
-      "latest_date": "2026-07-07",
-      "latest_iv": 1.6878
+      "points": 14,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.7429
     },
     "QSR": {
-      "points": 34,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.2817
+      "points": 35,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.2601
     },
     "NYT": {
       "points": 27,
@@ -4839,34 +4650,34 @@
       "latest_iv": 0.8928
     },
     "OTIS": {
-      "points": 34,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3115
+      "points": 35,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3817
     },
     "TT": {
-      "points": 20,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3325
+      "points": 21,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3367
     },
     "JCI": {
-      "points": 26,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3528
+      "points": 27,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4105
     },
     "XYL": {
-      "points": 29,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3153
+      "points": 30,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.319
     },
     "RXO": {
-      "points": 22,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.7632
+      "points": 23,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.8306
     },
     "MO": {
-      "points": 17,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.2668
+      "points": 18,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.2558
     },
     "MDLZ": {
       "points": 23,
@@ -4874,49 +4685,49 @@
       "latest_iv": 0.414
     },
     "GIS": {
-      "points": 34,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3939
+      "points": 35,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3323
     },
     "CPB": {
-      "points": 30,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.9788
+      "points": 31,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.9588
     },
     "HRL": {
-      "points": 28,
-      "latest_date": "2026-07-06",
-      "latest_iv": 0.8628
+      "points": 29,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.7347
     },
     "MKC": {
-      "points": 34,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3843
+      "points": 35,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3734
     },
     "CLX": {
-      "points": 34,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.4069
+      "points": 35,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4323
     },
     "PPC": {
-      "points": 33,
-      "latest_date": "2026-07-07",
-      "latest_iv": 11.9069
+      "points": 34,
+      "latest_date": "2026-07-08",
+      "latest_iv": 13.3018
     },
     "CALM": {
-      "points": 34,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3856
+      "points": 35,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.362
     },
     "THS": {
-      "points": 34,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.6657
+      "points": 35,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.6728
     },
     "MPC": {
-      "points": 29,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3741
+      "points": 30,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.399
     },
     "HAL": {
       "points": 28,
@@ -4924,24 +4735,24 @@
       "latest_iv": 0.8058
     },
     "BKR": {
-      "points": 29,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3844
+      "points": 30,
+      "latest_date": "2026-07-08",
+      "latest_iv": 1.0258
     },
     "RRC": {
-      "points": 24,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3494
+      "points": 25,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3505
     },
     "WMB": {
-      "points": 23,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.2835
+      "points": 24,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3647
     },
     "OKE": {
-      "points": 23,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3113
+      "points": 24,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.2544
     },
     "KMI": {
       "points": 17,
@@ -4949,24 +4760,24 @@
       "latest_iv": 0.2561
     },
     "ET": {
-      "points": 30,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.2081
+      "points": 31,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.2025
     },
     "CQP": {
-      "points": 26,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.2982
+      "points": 27,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.2397
     },
     "FANG": {
-      "points": 34,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.4768
+      "points": 35,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3679
     },
     "MTDR": {
-      "points": 34,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3952
+      "points": 35,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.5842
     },
     "CNX": {
       "points": 8,
@@ -4979,9 +4790,9 @@
       "latest_iv": 0.2083
     },
     "IDA": {
-      "points": 30,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3506
+      "points": 31,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.2838
     },
     "POR": {
       "points": 17,
@@ -4999,9 +4810,9 @@
       "latest_iv": 0.2424
     },
     "EQIX": {
-      "points": 33,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3459
+      "points": 34,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3289
     },
     "AVB": {
       "points": 28,
@@ -5019,49 +4830,49 @@
       "latest_iv": 0.4591
     },
     "ARE": {
-      "points": 34,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.6023
+      "points": 35,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.5222
     },
     "KIM": {
-      "points": 32,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.0953
+      "points": 33,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.2655
     },
     "REG": {
-      "points": 27,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.2171
+      "points": 28,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.1986
     },
     "FRT": {
-      "points": 24,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.2395
+      "points": 25,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.273
     },
     "NNN": {
-      "points": 23,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.1111
+      "points": 24,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.1456
     },
     "VICI": {
-      "points": 28,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.1943
+      "points": 29,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.1861
     },
     "GLPI": {
-      "points": 20,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.2395
+      "points": 21,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.213
     },
     "SBAC": {
-      "points": 31,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3839
+      "points": 32,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3793
     },
     "REXR": {
-      "points": 23,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3797
+      "points": 24,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.375
     },
     "SUI": {
       "points": 7,
@@ -5109,24 +4920,24 @@
       "latest_iv": 0.2835
     },
     "APD": {
-      "points": 34,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3208
+      "points": 35,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.2823
     },
     "FMC": {
-      "points": 13,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.628
+      "points": 14,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.654
     },
     "OLN": {
-      "points": 34,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.731
+      "points": 35,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.5614
     },
     "RPM": {
-      "points": 24,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.4462
+      "points": 25,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3286
     },
     "SON": {
       "points": 25,
@@ -5134,19 +4945,19 @@
       "latest_iv": 0.2604
     },
     "ATI": {
-      "points": 29,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.7918
+      "points": 30,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.6456
     },
     "CMC": {
-      "points": 16,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3702
+      "points": 17,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4864
     },
     "SLGN": {
-      "points": 34,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3719
+      "points": 35,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.365
     },
     "MSFT": {
       "points": 5,
@@ -5159,9 +4970,9 @@
       "latest_iv": 0.4478
     },
     "CRM": {
-      "points": 26,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.716
+      "points": 27,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.7237
     },
     "ACN": {
       "points": 19,
@@ -5174,9 +4985,9 @@
       "latest_iv": 0.9524
     },
     "NOW": {
-      "points": 20,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.8598
+      "points": 21,
+      "latest_date": "2026-07-08",
+      "latest_iv": 1.0089
     },
     "ADBE": {
       "points": 21,
@@ -5184,14 +4995,14 @@
       "latest_iv": 0.5239
     },
     "NTAP": {
-      "points": 10,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.5342
+      "points": 11,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.6078
     },
     "EPAM": {
-      "points": 28,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.974
+      "points": 29,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.6972
     },
     "JNJ": {
       "points": 7,
@@ -5219,19 +5030,19 @@
       "latest_iv": 0.3415
     },
     "IDXX": {
-      "points": 28,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.294
+      "points": 29,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.2894
     },
     "IQV": {
-      "points": 24,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.7938
+      "points": 25,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.5079
     },
     "HSIC": {
-      "points": 12,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.39
+      "points": 13,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.2864
     },
     "TECH": {
       "points": 14,
@@ -5239,9 +5050,9 @@
       "latest_iv": 0.4317
     },
     "VTRS": {
-      "points": 13,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.4317
+      "points": 14,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4789
     },
     "ALGN": {
       "points": 14,
@@ -5249,9 +5060,9 @@
       "latest_iv": 0.6226
     },
     "DXCM": {
-      "points": 21,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.7616
+      "points": 22,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4434
     },
     "MRNA": {
       "points": 19,
@@ -5259,29 +5070,29 @@
       "latest_iv": 1.739
     },
     "MTD": {
-      "points": 17,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3181
+      "points": 18,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3168
     },
     "RVTY": {
-      "points": 11,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.5617
+      "points": 12,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.6132
     },
     "SOLV": {
-      "points": 31,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.8605
+      "points": 32,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4275
     },
     "UHS": {
-      "points": 24,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3339
+      "points": 25,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3396
     },
     "WAT": {
-      "points": 19,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.5234
+      "points": 20,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4859
     },
     "JPM": {
       "points": 9,
@@ -5294,14 +5105,14 @@
       "latest_iv": 0.9764
     },
     "WFC": {
-      "points": 16,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.6007
+      "points": 17,
+      "latest_date": "2026-07-08",
+      "latest_iv": 1.1835
     },
     "AXP": {
-      "points": 14,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.5511
+      "points": 15,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4895
     },
     "SPGI": {
       "points": 16,
@@ -5309,9 +5120,9 @@
       "latest_iv": 1.0191
     },
     "ICE": {
-      "points": 13,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.4327
+      "points": 14,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4836
     },
     "CME": {
       "points": 7,
@@ -5324,59 +5135,59 @@
       "latest_iv": 0.7088
     },
     "ALL": {
-      "points": 33,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3167
+      "points": 34,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3104
     },
     "USB": {
-      "points": 17,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.5502
+      "points": 18,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4779
     },
     "PNC": {
-      "points": 12,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.8934
+      "points": 13,
+      "latest_date": "2026-07-08",
+      "latest_iv": 1.1549
     },
     "HBAN": {
-      "points": 12,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3248
+      "points": 13,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.5492
     },
     "KEY": {
-      "points": 19,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3129
+      "points": 20,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.306
     },
     "CFG": {
-      "points": 22,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3473
+      "points": 23,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.6125
     },
     "MTB": {
-      "points": 19,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3267
+      "points": 20,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3358
     },
     "RF": {
-      "points": 18,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3149
+      "points": 19,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3795
     },
     "NTRS": {
-      "points": 22,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3027
+      "points": 23,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4551
     },
     "IVZ": {
-      "points": 13,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.4277
+      "points": 14,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.548
     },
     "BEN": {
-      "points": 24,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.5508
+      "points": 25,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4981
     },
     "ALLY": {
       "points": 9,
@@ -5384,19 +5195,19 @@
       "latest_iv": 0.3879
     },
     "HD": {
-      "points": 27,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.4864
+      "points": 28,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4838
     },
     "MCD": {
-      "points": 7,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.2576
+      "points": 8,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3211
     },
     "SBUX": {
-      "points": 15,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3379
+      "points": 16,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3535
     },
     "TJX": {
       "points": 21,
@@ -5404,14 +5215,14 @@
       "latest_iv": 0.4221
     },
     "BKNG": {
-      "points": 17,
-      "latest_date": "2026-07-07",
-      "latest_iv": 1.2052
+      "points": 18,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.5901
     },
     "CMG": {
-      "points": 23,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.8537
+      "points": 24,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.5147
     },
     "GM": {
       "points": 14,
@@ -5419,14 +5230,14 @@
       "latest_iv": 0.3377
     },
     "DHI": {
-      "points": 13,
-      "latest_date": "2026-07-07",
-      "latest_iv": 1.0161
+      "points": 14,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4661
     },
     "PHM": {
-      "points": 9,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.9143
+      "points": 10,
+      "latest_date": "2026-07-08",
+      "latest_iv": 1.042
     },
     "BBY": {
       "points": 9,
@@ -5439,9 +5250,9 @@
       "latest_iv": 0.8865
     },
     "WYNN": {
-      "points": 17,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3825
+      "points": 18,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.6313
     },
     "HLT": {
       "points": 15,
@@ -5449,24 +5260,24 @@
       "latest_iv": 0.412
     },
     "RCL": {
-      "points": 22,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.8033
+      "points": 23,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.8191
     },
     "CCL": {
-      "points": 18,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.5723
+      "points": 19,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.5614
     },
     "EXPE": {
-      "points": 9,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.8658
+      "points": 10,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.6147
     },
     "LYV": {
-      "points": 12,
-      "latest_date": "2026-07-06",
-      "latest_iv": 1.0418
+      "points": 13,
+      "latest_date": "2026-07-08",
+      "latest_iv": 1.056
     },
     "DRI": {
       "points": 2,
@@ -5499,9 +5310,9 @@
       "latest_iv": 0.7864
     },
     "LVS": {
-      "points": 12,
-      "latest_date": "2026-07-06",
-      "latest_iv": 1.5411
+      "points": 13,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4694
     },
     "DIS": {
       "points": 14,
@@ -5514,14 +5325,14 @@
       "latest_iv": 0.2972
     },
     "TMUS": {
-      "points": 18,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.351
+      "points": 19,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.5792
     },
     "MTCH": {
-      "points": 28,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3061
+      "points": 29,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4656
     },
     "FOXA": {
       "points": 16,
@@ -5549,14 +5360,14 @@
       "latest_iv": 0.3221
     },
     "RTX": {
-      "points": 7,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.7696
+      "points": 8,
+      "latest_date": "2026-07-08",
+      "latest_iv": 1.2016
     },
     "GD": {
-      "points": 8,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.6017
+      "points": 9,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.5157
     },
     "PH": {
       "points": 15,
@@ -5564,19 +5375,19 @@
       "latest_iv": 0.2904
     },
     "ROK": {
-      "points": 24,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.5247
+      "points": 25,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4635
     },
     "AME": {
-      "points": 19,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3372
+      "points": 20,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3163
     },
     "FTV": {
-      "points": 23,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3401
+      "points": 24,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3593
     },
     "SWK": {
       "points": 18,
@@ -5584,19 +5395,19 @@
       "latest_iv": 0.3746
     },
     "GWW": {
-      "points": 18,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.4485
+      "points": 19,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4901
     },
     "NSC": {
-      "points": 12,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3072
+      "points": 13,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3271
     },
     "UNP": {
-      "points": 11,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.5347
+      "points": 12,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.7359
     },
     "AAL": {
       "points": 11,
@@ -5614,14 +5425,14 @@
       "latest_iv": 0.3402
     },
     "GNRC": {
-      "points": 4,
-      "latest_date": "2026-07-07",
-      "latest_iv": 1.061
+      "points": 5,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.916
     },
     "IEX": {
-      "points": 17,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3818
+      "points": 18,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.362
     },
     "IR": {
       "points": 2,
@@ -5629,34 +5440,34 @@
       "latest_iv": 0.4876
     },
     "SAIA": {
-      "points": 21,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.4913
+      "points": 22,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.5113
     },
     "WERN": {
-      "points": 13,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.5511
+      "points": 14,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.6061
     },
     "GXO": {
-      "points": 27,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3245
+      "points": 28,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3894
     },
     "LHX": {
-      "points": 4,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.2495
+      "points": 5,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.5782
     },
     "PG": {
-      "points": 23,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.6245
+      "points": 24,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4483
     },
     "KO": {
-      "points": 8,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.6106
+      "points": 9,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.2968
     },
     "PEP": {
       "points": 1,
@@ -5664,14 +5475,14 @@
       "latest_iv": 0.8185
     },
     "PM": {
-      "points": 2,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.8684
+      "points": 3,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.7697
     },
     "SJM": {
-      "points": 27,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3402
+      "points": 28,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3553
     },
     "CHD": {
       "points": 1,
@@ -5679,9 +5490,9 @@
       "latest_iv": 0.2356
     },
     "EL": {
-      "points": 16,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.514
+      "points": 17,
+      "latest_date": "2026-07-08",
+      "latest_iv": 1.0231
     },
     "WBA": {
       "points": 1,
@@ -5689,14 +5500,14 @@
       "latest_iv": 0.4623
     },
     "KR": {
-      "points": 13,
-      "latest_date": "2026-06-17",
-      "latest_iv": 1.3012
+      "points": 14,
+      "latest_date": "2026-07-08",
+      "latest_iv": 1.2589
     },
     "TSN": {
-      "points": 28,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3267
+      "points": 29,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.2872
     },
     "BJ": {
       "points": 2,
@@ -5709,24 +5520,24 @@
       "latest_iv": 0.4497
     },
     "XOM": {
-      "points": 15,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.5118
+      "points": 16,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.7213
     },
     "PSX": {
-      "points": 15,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.4125
+      "points": 16,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.5295
     },
     "OXY": {
-      "points": 23,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.8427
+      "points": 24,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.7429
     },
     "AR": {
-      "points": 8,
-      "latest_date": "2026-07-07",
-      "latest_iv": 1.3252
+      "points": 9,
+      "latest_date": "2026-07-08",
+      "latest_iv": 1.0313
     },
     "EQT": {
       "points": 6,
@@ -5734,14 +5545,14 @@
       "latest_iv": 1.2991
     },
     "NOV": {
-      "points": 21,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.4194
+      "points": 22,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4598
     },
     "D": {
-      "points": 15,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.185
+      "points": 16,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.1994
     },
     "ES": {
       "points": 5,
@@ -5754,9 +5565,9 @@
       "latest_iv": 0.0706
     },
     "AVA": {
-      "points": 23,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.2438
+      "points": 24,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.6322
     },
     "AMT": {
       "points": 29,
@@ -5764,29 +5575,29 @@
       "latest_iv": 0.3085
     },
     "PLD": {
-      "points": 19,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.2612
+      "points": 20,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3431
     },
     "PSA": {
-      "points": 23,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3864
+      "points": 24,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.2905
     },
     "O": {
-      "points": 17,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.2143
+      "points": 18,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.2047
     },
     "SPG": {
-      "points": 22,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3161
+      "points": 23,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.5245
     },
     "WPC": {
-      "points": 19,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.175
+      "points": 20,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.2195
     },
     "ELS": {
       "points": 2,
@@ -5799,9 +5610,9 @@
       "latest_iv": 0.6052
     },
     "SHW": {
-      "points": 21,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.5556
+      "points": 22,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.364
     },
     "ECL": {
       "points": 1,
@@ -5814,9 +5625,9 @@
       "latest_iv": 0.932
     },
     "STLD": {
-      "points": 14,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.4855
+      "points": 15,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.5035
     },
     "VMC": {
       "points": 13,
@@ -5824,9 +5635,9 @@
       "latest_iv": 0.2927
     },
     "MLM": {
-      "points": 26,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3177
+      "points": 27,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.2909
     },
     "ALB": {
       "points": 17,
@@ -5834,29 +5645,29 @@
       "latest_iv": 0.8556
     },
     "EMN": {
-      "points": 12,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3873
+      "points": 13,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3984
     },
     "HUN": {
-      "points": 29,
-      "latest_date": "2026-07-07",
-      "latest_iv": 1.1475
+      "points": 30,
+      "latest_date": "2026-07-08",
+      "latest_iv": 1.2029
     },
     "PPG": {
-      "points": 5,
-      "latest_date": "2026-07-07",
-      "latest_iv": 1.4053
+      "points": 6,
+      "latest_date": "2026-07-08",
+      "latest_iv": 1.1429
     },
     "PKG": {
-      "points": 16,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3712
+      "points": 17,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3859
     },
     "CCK": {
-      "points": 4,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.368
+      "points": 5,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4035
     },
     "BALL": {
       "points": 9,
@@ -5894,14 +5705,14 @@
       "latest_iv": 0.6788
     },
     "TER": {
-      "points": 17,
-      "latest_date": "2026-07-07",
-      "latest_iv": 1.1848
+      "points": 18,
+      "latest_date": "2026-07-08",
+      "latest_iv": 1.2711
     },
     "ABT": {
-      "points": 20,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.4691
+      "points": 21,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4736
     },
     "BSX": {
       "points": 3,
@@ -5909,19 +5720,19 @@
       "latest_iv": 0.982
     },
     "ISRG": {
-      "points": 9,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.4988
+      "points": 10,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.6947
     },
     "MDT": {
-      "points": 24,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3373
+      "points": 25,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.8157
     },
     "AFL": {
-      "points": 19,
-      "latest_date": "2026-07-06",
-      "latest_iv": 0.6242
+      "points": 20,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.9592
     },
     "NDAQ": {
       "points": 13,
@@ -5929,24 +5740,24 @@
       "latest_iv": 0.592
     },
     "NKE": {
-      "points": 22,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.4119
+      "points": 23,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4455
     },
     "ROST": {
-      "points": 27,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3712
+      "points": 28,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4137
     },
     "NCLH": {
-      "points": 32,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.7627
+      "points": 33,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.8939
     },
     "ABNB": {
-      "points": 18,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.6759
+      "points": 19,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4328
     },
     "META": {
       "points": 4,
@@ -5959,9 +5770,9 @@
       "latest_iv": 0.4062
     },
     "GOOG": {
-      "points": 15,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3648
+      "points": 16,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3975
     },
     "CMCSA": {
       "points": 20,
@@ -5979,9 +5790,9 @@
       "latest_iv": 0.5185
     },
     "ETN": {
-      "points": 24,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.7277
+      "points": 25,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.7096
     },
     "FDX": {
       "points": 4,
@@ -5989,9 +5800,9 @@
       "latest_iv": 0.6652
     },
     "CTAS": {
-      "points": 26,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.494
+      "points": 27,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.5559
     },
     "KMB": {
       "points": 25,
@@ -5999,29 +5810,29 @@
       "latest_iv": 0.8124
     },
     "CAG": {
-      "points": 23,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.4365
+      "points": 24,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3893
     },
     "CVX": {
-      "points": 16,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.5025
+      "points": 17,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.5024
     },
     "COP": {
-      "points": 17,
-      "latest_date": "2026-06-25",
-      "latest_iv": 1.6528
+      "points": 18,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.6373
     },
     "EOG": {
-      "points": 25,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.587
+      "points": 26,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4759
     },
     "VLO": {
-      "points": 27,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.5229
+      "points": 28,
+      "latest_date": "2026-07-08",
+      "latest_iv": 1.0067
     },
     "APA": {
       "points": 19,
@@ -6029,9 +5840,9 @@
       "latest_iv": 0.9705
     },
     "LNG": {
-      "points": 19,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.7346
+      "points": 20,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.6741
     },
     "DLR": {
       "points": 26,
@@ -6039,14 +5850,14 @@
       "latest_iv": 0.9152
     },
     "MOS": {
-      "points": 25,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.5331
+      "points": 26,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4842
     },
     "CF": {
-      "points": 14,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.5097
+      "points": 15,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.7071
     },
     "SEE": {
       "points": 27,
@@ -6059,9 +5870,9 @@
       "latest_iv": 0.8018
     },
     "C": {
-      "points": 21,
-      "latest_date": "2026-07-07",
-      "latest_iv": 1.1894
+      "points": 22,
+      "latest_date": "2026-07-08",
+      "latest_iv": 1.0298
     },
     "EA": {
       "points": 24,
@@ -6079,14 +5890,14 @@
       "latest_iv": 0.8908
     },
     "DHR": {
-      "points": 21,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.9256
+      "points": 22,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.6883
     },
     "GEHC": {
-      "points": 17,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.6423
+      "points": 18,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3662
     },
     "CBOE": {
       "points": 8,
@@ -6094,24 +5905,24 @@
       "latest_iv": 0.4186
     },
     "TOL": {
-      "points": 11,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.4939
+      "points": 12,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4302
     },
     "MMM": {
-      "points": 19,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.989
+      "points": 20,
+      "latest_date": "2026-07-08",
+      "latest_iv": 1.1135
     },
     "COST": {
-      "points": 18,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.4142
+      "points": 19,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.5664
     },
     "EBAY": {
-      "points": 12,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.6355
+      "points": 13,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.8388
     },
     "FOX": {
       "points": 14,
@@ -6119,14 +5930,14 @@
       "latest_iv": 0.4085
     },
     "CSX": {
-      "points": 22,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.58
+      "points": 23,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.6264
     },
     "WMT": {
-      "points": 9,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.6909
+      "points": 10,
+      "latest_date": "2026-07-08",
+      "latest_iv": 1.1551
     },
     "VRSN": {
       "points": 2,
@@ -6144,9 +5955,9 @@
       "latest_iv": 0.3921
     },
     "STT": {
-      "points": 22,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3742
+      "points": 23,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3767
     },
     "AMZN": {
       "points": 6,
@@ -6154,9 +5965,9 @@
       "latest_iv": 0.3656
     },
     "MAR": {
-      "points": 15,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.6042
+      "points": 16,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4639
     },
     "IRM": {
       "points": 12,
@@ -6164,24 +5975,24 @@
       "latest_iv": 0.7324
     },
     "ADI": {
-      "points": 14,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.6498
+      "points": 15,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.6767
     },
     "LOW": {
-      "points": 7,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3497
+      "points": 8,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4907
     },
     "TRNO": {
-      "points": 18,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.2845
+      "points": 19,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.4186
     },
     "RS": {
-      "points": 18,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3398
+      "points": 19,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3757
     },
     "LUMN": {
       "points": 16,
@@ -6209,9 +6020,9 @@
       "latest_iv": 0.8411
     },
     "GS": {
-      "points": 9,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.7139
+      "points": 10,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.66
     },
     "NFLX": {
       "points": 5,
@@ -6224,9 +6035,9 @@
       "latest_iv": 0.7989
     },
     "NUE": {
-      "points": 13,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.38
+      "points": 14,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.3774
     },
     "MS": {
       "points": 9,
@@ -6244,34 +6055,34 @@
       "latest_iv": 0.4217
     },
     "MCHP": {
-      "points": 8,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.9035
+      "points": 9,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.8353
     },
     "NOC": {
-      "points": 8,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.3378
+      "points": 9,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.2544
     },
     "TXN": {
-      "points": 4,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.7127
+      "points": 5,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.8373
     },
     "SNPS": {
-      "points": 6,
-      "latest_date": "2026-07-07",
-      "latest_iv": 1.1845
+      "points": 7,
+      "latest_date": "2026-07-08",
+      "latest_iv": 1.0408
     },
     "CDNS": {
-      "points": 5,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.6036
+      "points": 6,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.7598
     },
     "TMO": {
-      "points": 4,
-      "latest_date": "2026-07-07",
-      "latest_iv": 0.8824
+      "points": 5,
+      "latest_date": "2026-07-08",
+      "latest_iv": 0.5696
     },
     "CVS": {
       "points": 4,
@@ -6289,9 +6100,9 @@
       "latest_iv": 1.0629
     },
     "CNC": {
-      "points": 3,
-      "latest_date": "2026-07-07",
-      "latest_iv": 1.097
+      "points": 4,
+      "latest_date": "2026-07-08",
+      "latest_iv": 1.1112
     },
     "QCOM": {
       "points": 1,
@@ -6299,14 +6110,14 @@
       "latest_iv": 0.837
     },
     "STX": {
-      "points": 2,
-      "latest_date": "2026-07-07",
-      "latest_iv": 1.5372
+      "points": 3,
+      "latest_date": "2026-07-08",
+      "latest_iv": 1.2781
     },
     "INTC": {
-      "points": 1,
-      "latest_date": "2026-07-07",
-      "latest_iv": 1.2931
+      "points": 2,
+      "latest_date": "2026-07-08",
+      "latest_iv": 1.2759
     }
   }
 }
